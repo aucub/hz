@@ -5,3 +5,9 @@ db.json
 node_modules/
 public/
 .deploy*/
+/.idea/.gitignore
+/.idea/blog.iml
+/.idea/encodings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
