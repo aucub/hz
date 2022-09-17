@@ -1,9 +1,11 @@
 ---
 title: hbase
-tags: hbase
-keywords: hbase
+tags: 
+  - hbase
+keywords: hbase,hadoop,zookeeper
 abbrlink: 8e90eaec
 date: 2022-09-16 15:07:49
+updated: 2022-09-16 15:07:49
 ---
 
 抄自[https://www.cnblogs.com/yy-yang/p/14677554.html](https://www.cnblogs.com/yy-yang/p/14677554.html)

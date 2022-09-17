@@ -12,13 +12,13 @@ Grasscutter割草机在Windows上的部署
 <!-- more -->
 ### 准备需要使用的文件和应用
 
-1.[下载并解压Grasscutter源代码（按需求选择版本）](https://github.com/Grasscutters/Grasscutter)      [3.1ps](https://github.com/zhongli0409/Grasscutter-updated-v2)
+1.[下载并解压Grasscutter源代码（按需求选择版本）](https://github.com/Grasscutters/Grasscutter)         [3.1ps](https://github.com/zhongli0409/Grasscutter-updated-v2)
 
-2.[下载对应版本的Grasscutter_Resources](https://github.com/tamilpp25/Grasscutter_Resources)     [3.0.5x](https://github.com/snoobi-seggs/nilou_seggs/tree/master/resources)
+2.[下载对应版本的Grasscutter_Resources](https://github.com/tamilpp25/Grasscutter_Resources)        [3.0.5x](https://github.com/snoobi-seggs/nilou_seggs/tree/master/resources)
 
 3.下载并[安装MongoDB Community Server](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.1-signed.msi)，如无修改安装目录的需求一路点确认即可。
 
-4.准备op非大陆版本的客户端，建议登陆一次，下载需要更新的资源，大陆版本也可。本文以非大陆版本为例，~~GenshinImpact.exe~~路径为~~C:\Program Files\Genshin Impact\GenshinImpact.exe~~,路径问题请自行转换。     [3.0.53](https://autopatchhkbeta.yuanshen.com/client_app/download/beta_pc/20220908223037_qbm74bk1YwphAPhm/GenshinImpact_3.0.53_beta.zip)
+4.准备op非大陆版本的客户端，建议登陆一次，下载需要更新的资源，大陆版本也可。本文以非大陆版本为例，~~GenshinImpact.exe~~路径为~~C:\Program Files\Genshin Impact\GenshinImpact.exe~~,路径问题请自行转换。        [3.0.53](https://autopatchhkbeta.yuanshen.com/client_app/download/beta_pc/20220908223037_qbm74bk1YwphAPhm/GenshinImpact_3.0.53_beta.zip)
 
 5.安装JDK17，并加入环境变量。
 
@@ -49,7 +49,7 @@ pip install mitmdump
 
 编译完成将生成jar文件，文件名如grasscutter-1.2.3-dev.jar，将其重命名为grasscutter.jar
 
-可以使用编译好的jar文件，版本正确即可。[Grasscutter](https://github.com/Grasscutters/Grasscutter/releases)      [3.0.5x](https://github.com/snoobi-seggs/nilou_seggs/blob/master/grasscutter-1.2.3-dev.jar)
+可以使用编译好的jar文件，版本正确即可。[Grasscutter](https://github.com/Grasscutters/Grasscutter/releases)          [3.0.5x](https://github.com/snoobi-seggs/nilou_seggs/blob/master/grasscutter-1.2.3-dev.jar)
 
 2.在Grasscutter源代码文件夹新建resources文件夹，将Grasscutter_Resources\Resources下的文件夹全部移动至Grasscutter\resources目录下。
 
