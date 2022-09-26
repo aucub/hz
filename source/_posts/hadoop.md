@@ -5,7 +5,7 @@ tags:
 keywords: hadoop,docker,wsl
 abbrlink: b4989874
 date: 2022-09-16 14:25:21
-updated: 2022-09-16 14:25:21
+updated: 2022-09-26 8:23:21
 ---
 
 抄自：
@@ -35,17 +35,29 @@ updated: 2022-09-16 14:25:21
 }
 ```
 
-### wsl**启动**Docker
+### wsl**启动**Docker  
 
-genie 有三个指令：
+Windows Subsystem for Linux Preview 0.67.6.0开始支持systemd  
+```
+sudo vim /etc/wsl.conf  
+[boot]  #写入
+systemd=true  
+```
+重新启动   
+```
+wsl.exe --shutdown  #关闭wsl，之后重新进入
+systemctl start docker  #启动docker
+systemctl enable docker  #随wsl启动  
+```
+~~genie 有三个指令：~~
 
-genie -i 启动 systemd 进程  
+~~genie -i 启动 systemd 进程  
 genie -s 启动 systemd 进程，并进入该环境终端    
-genie -c <command> 启动 systemd 进程，并执行相应的指令
+genie -c <command> 启动 systemd 进程，并执行相应的指令~~
 
-启动docker服务
+~~启动docker服务~~
 
-`genie -c systemctl start docker`
+~~genie -c systemctl start docker~~
 
 测试：可以使用命令 sudo docker run hello-world 运行你的第一个容器
 
