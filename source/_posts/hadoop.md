@@ -96,7 +96,9 @@ genie -c <command> 启动 systemd 进程，并执行相应的指令~~
 
 命名这个容器为 master，使用 `ubuntu:lastest` 镜像
 
-`Manual network port publishing`手动添加端口映射hadoop:9870和yarn:8088以及hbase:16010
+`Manual network port publishing`手动添加端口映射hadoop:9870和yarn:8088以及hbase:16010 
+
+或者`Publish all exposed network ports to random host ports`使用随机端口映射，比较方便
 
 然后往下翻，在 `Command & logging` 中，设置 Command 为 `tail -f /dev/null`，保证容器挂起，而不是每次启动后自动关机，控制端使用 `Interactive & TTY` 模式
 
@@ -183,47 +185,43 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 ### SSH免密登录  
 
-**生成密钥对**
+抄自[https://blog.csdn.net/jeikerxiao/article/details/84105529](https://blog.csdn.net/jeikerxiao/article/details/84105529)
 
-使用命令 `ssh-keygen -t rsa`，生成密钥对，一直回车
+**客户端生成公私钥**
+
+使用命令 `ssh-keygen`，生成密钥对，一直回车
 
 该命令将在～/.ssh 目录下面产生一个密钥 id_rsa 和一个公钥 id_rsa.pub
 
-**免密登录本机**
-首先使用下面的命令，将公钥发放给自己
+**上传公钥到服务器**
+首先使用下面的命令，上传公钥到服务器
 
 ```bash
-cp ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@slave1
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@slave2
 ```
 
-**可以手动建立 authorized_keys 文件，手动将公钥粘贴进去**
-
-如果权限不正确，请使用下面的命令修改权限
-
-`chmod 600 authorized_keys`
-
-然后使用下面的命令，免密连接本机，测试是否成功
+然后使用下面的命令，测试是否成功
 
 第一次登录需要进行一次验证，输入 yes 即可
 
- `ssh localhost`
+ `ssh slave1`
 
 然后可通过 exit，退出登录，返回之前的页面
 
-接下来在每一台节点上，重复运行命令 `ssh-keygen -t rsa`，生成密钥对
+接下来在每一台节点上，重复运行命令 `ssh-keygen`，生成密钥对
 
-使用命令 `cat ~/.ssh/id_rsa.pub`，查看公钥
 
-**将内容复制到主机 master 节点上的 `~/.ssh/authorized_keys`文件中**
-
-然后使用下面的命令，将 authorized_keys 文件传给，其他节点的相同位置
+然后使用下面的命令，将文件传给其他节点
 
 ```bash
-scp authorized_keys root@slave2:/root/.ssh/
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@master
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@slave2
 ```
 
 ```bash
-scp authorized_keys root@slave1:/root/.ssh/
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@master
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@slave1
 ```
 
 这样子，我们就让每一台机器都持有了集群中所有节点的公钥，任意机器都可以通过 ssh 登录到任意节点
