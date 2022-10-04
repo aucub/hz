@@ -107,7 +107,7 @@ language: zh-CN
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:aucub/aucub.github.io.git
+  repo: git@hexo.github.com:aucub/aucub.github.io.git
   branch: master
 
 

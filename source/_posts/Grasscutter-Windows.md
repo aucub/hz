@@ -13,10 +13,10 @@ Grasscutter割草机在Windows上的部署
 ### 准备需要使用的文件和应用
 
 1.[下载并解压Grasscutter源代码（按需求选择版本）](https://github.com/Grasscutters/Grasscutter)         
-2.[下载对应版本的Grasscutter_Resources](https://github.com/tamilpp25/Grasscutter_Resources)               [3.1.50](https://github.com/snoobi-seggs/nahida_seggs/tree/master/resources)  
+2.[下载对应版本的Grasscutter_Resources](https://github.com/tamilpp25/Grasscutter_Resources) | [3.1.50](https://github.com/snoobi-seggs/nahida_seggs/tree/master/resources)  
 3.下载并[安装MongoDB Community Server](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.2-signed.msi)，如无修改安装目录的需求一路点确认即可。
 
-4.准备op非大陆版本的客户端，建议登陆一次，下载需要更新的资源，大陆版本也可。本文以非大陆版本为例，~~GenshinImpact.exe~~路径为~~C:\Program Files\Genshin Impact\GenshinImpact.exe~~,路径问题请自行转换。                       [3.1.50](https://pan.baidu.com/s/1vg54kSPO2Si86s2zoIS0pg?pwd=wcop)
+4.准备op非大陆版本的客户端，建议登陆一次，下载需要更新的资源，大陆版本也可。本文以非大陆版本为例，~~GenshinImpact.exe~~路径为~~C:\Program Files\Genshin Impact\GenshinImpact.exe~~,路径问题请自行转换。[3.1.50](https://pan.baidu.com/s/1vg54kSPO2Si86s2zoIS0pg?pwd=wcop)
 
 5.安装JDK17，并加入环境变量。
 
@@ -34,7 +34,7 @@ winget install Python.Python.3
 pip install mitmdump
 ```
 
-7.下载global-metadata.dat或者UserAssembly.dll文件(或许可使用Grasscutters Cultivation)[Grasscutters Cultivation9.26编译版本](https://drive.google.com/file/d/1eLRbtdSdKlSUeoE2yh_dNssXE35NNkhL/view?usp=sharing)                      [YuukiPS Launcher](https://github.com/akbaryahya/YuukiPS-Launcher)                      [Collei_Launcher](https://github.com/Bambi5/Collei_Launcher)
+7.下载global-metadata.dat或者UserAssembly.dll文件(或许可使用Grasscutters Cultivation)[Grasscutters Cultivation9.26编译版本](https://drive.google.com/file/d/1eLRbtdSdKlSUeoE2yh_dNssXE35NNkhL/view?usp=sharing) | [YuukiPS Launcher](https://github.com/akbaryahya/YuukiPS-Launcher) | [Collei_Launcher](https://github.com/Bambi5/Collei_Launcher)
 
 ## 制作
 
@@ -47,7 +47,7 @@ pip install mitmdump
 
 编译完成将生成jar文件，文件名如grasscutter-1.2.3-dev.jar，将其重命名为grasscutter.jar
 
-可以使用编译好的jar文件，版本正确即可。[Grasscutter](https://github.com/Grasscutters/Grasscutter/releases)              [3.1.50](https://github.com/snoobi-seggs/nahida_seggs/blob/master/grasscutter-1.2.3-dev.jar)       
+可以使用编译好的jar文件，版本正确即可。[Grasscutter](https://github.com/Grasscutters/Grasscutter/releases) | [3.1.50](https://github.com/snoobi-seggs/nahida_seggs/blob/master/grasscutter-1.2.3-dev.jar)       
 2.在Grasscutter源代码文件夹新建resources文件夹，将Grasscutter_Resources\Resources下的文件夹全部移动至Grasscutter\resources目录下。
 
 ### 开始部署
