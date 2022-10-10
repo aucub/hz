@@ -34,7 +34,7 @@ winget install Python.Python.3
 pip install mitmdump
 ```
 
-7.下载global-metadata.dat或者UserAssembly.dll文件(或许可使用Grasscutters Cultivation)[Grasscutters Cultivation9.26编译版本](https://drive.google.com/file/d/1eLRbtdSdKlSUeoE2yh_dNssXE35NNkhL/view?usp=sharing) | [YuukiPS Launcher](https://github.com/akbaryahya/YuukiPS-Launcher) | [Collei_Launcher](https://github.com/Bambi5/Collei_Launcher)
+7.下载global-metadata.dat或者UserAssembly.dll文件(可使用启动器)[Grasscutters Cultivation9.26编译版本](https://drive.google.com/file/d/1eLRbtdSdKlSUeoE2yh_dNssXE35NNkhL/view?usp=sharing) | [YuukiPS Launcher](https://github.com/akbaryahya/YuukiPS-Launcher) | [Collei_Launcher](https://github.com/Bambi5/Collei_Launcher)
 
 ## 制作
 
