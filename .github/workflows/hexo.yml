@@ -6,35 +6,29 @@ on: [push, repository_dispatch]
 
 
 jobs:
-  deploy:
+  build:
     name: Deploy Hexo Public To Pages
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
 
     steps:
-      # check it to your workflow can access it
-      # from: https://github.com/actions/checkout
       - name: Checkout
         uses: actions/checkout@v1
-
-      # from: https://github.com/actions/setup-node
-      - name: Setup Node.js 16.x
-        uses: actions/setup-node@master
-        with:
-          node-version: "16.x"
+        with: # 条件
+          submodules: true ## Checkout private submodules(themes or something else).
 
       # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.) 缓存压缩 node_modules，不用每次下载，使用时解压，可以加快工作流的执行过程，超过 7 天没有使用将删除压缩包。
       - name: Cache node modules 
-      uses: actions/cache@v1
-      id: cache
-      with:
-        path: node_modules
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-                    ${{ runner.os }}-node-
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+                      ${{ runner.os }}-node-
       - name: Install Dependencies
-      if: steps.cache.outputs.cache-hit != 'true' # 如果变量 cache-hit 不等于 true
+        if: steps.cache.outputs.cache-hit != 'true' # 如果变量 cache-hit 不等于 true
         run: |
           npm install hexo-cli -g
           npm install
