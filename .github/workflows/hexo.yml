@@ -1,20 +1,31 @@
-name: Deploy # workflow 名字
+# workflow name
+name: Deploy
 
-on:
-  [push] # 触发事件
+# 当有 push 到仓库和外部触发的时候就运行
+on: [push, repository_dispatch]
+
 
 jobs:
-  build: # Job 1 ID
-    runs-on: ubuntu-latest # 设定运行环境为最新版 Ubuntu。
-    name: Deploy blog.
-    steps:
-    - name: Checkout # Step 1 获取源码
-      uses: actions/checkout@v1 # 使用 actions/checkout@v1
-      with: # 条件
-        submodules: true ## Checkout private submodules(themes or something else).
+  deploy:
+    name: Deploy Hexo Public To Pages
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
 
-    # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.) 缓存压缩 node_modules，不用每次下载，使用时解压，可以加快工作流的执行过程，超过 7 天没有使用将删除压缩包。
-    - name: Cache node modules # Step 2
+    steps:
+      # check it to your workflow can access it
+      # from: https://github.com/actions/checkout
+      - name: Checkout Repository master branch
+        uses: actions/checkout@master
+
+      # from: https://github.com/actions/setup-node
+      - name: Setup Node.js 18.x
+        uses: actions/setup-node@master
+        with:
+          node-version: "18.x"
+
+      # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.) 缓存压缩 node_modules，不用每次下载，使用时解压，可以加快工作流的执行过程，超过 7 天没有使用将删除压缩包。
+      - name: Cache node modules 
       uses: actions/cache@v1
       id: cache
       with:
@@ -22,16 +33,25 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
                     ${{ runner.os }}-node-
-    - name: Install Dependencies # Step 3 
+      - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true' # 如果变量 cache-hit 不等于 true
-      run: npm install # 安装 NPM 相关依赖
+        run: |
+          npm install hexo-cli -g
+          npm install
 
-    # Deploy hexo blog website.
-    - name: Deploy # Step 4
-      id: deploy
-      uses: sma11black/hexo-action@v1.0.4
-      with:
-        deploy_key: ${{ secrets.DEPLOY_KEY }}
-        user_name: aucub #你 GitHub 用户名。如果去除该行则使用 bot。去除该行是不推荐行为。
-        user_email: 1279921277@qq.com #你 GitHub 邮箱。如果去除该行则使用 bot。去除该行是不推荐行为。
-        commit_msg: ${{ github.event.head_commit.message }} #Hexo 部署博客的自动提交备注
+      # 生成可访问的文档
+      - name: hexo generate
+        run: |
+          hexo clean
+          hexo g
+
+      # 生成pages且推送到文件仓库 from https://github.com/peaceiris/actions-gh-pages
+      - name: Deploy hexo to Github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }} # 此处为 hexo-deploy-key
+          external_repository: aucub/aucub.github.io
+          publish_branch: master
+          publish_dir: ./public
+          commit_message: deploy githubPage
+          # commit_message: ${{ github.event.head_commit.message }}
