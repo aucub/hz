@@ -1,0 +1,37 @@
+name: Deploy # workflow 名字
+
+on:
+  [push] # 触发事件
+
+jobs:
+  build: # Job 1 ID
+    runs-on: ubuntu-latest # 设定运行环境为最新版 Ubuntu。
+    name: Deploy blog.
+    steps:
+    - name: Checkout # Step 1 获取源码
+      uses: actions/checkout@v1 # 使用 actions/checkout@v1
+      with: # 条件
+        submodules: true ## Checkout private submodules(themes or something else).参见文末备注。
+
+    # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.) 缓存压缩 node_modules，不用每次下载，使用时解压，可以加快工作流的执行过程，超过 7 天没有使用将删除压缩包。
+    - name: Cache node modules # Step 2
+      uses: actions/cache@v1
+      id: cache
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+                    ${{ runner.os }}-node-
+    - name: Install Dependencies # Step 3 
+      if: steps.cache.outputs.cache-hit != 'true' # 如果变量 cache-hit 不等于 true
+      run: npm install # 安装 NPM 相关依赖
+
+    # Deploy hexo blog website.
+    - name: Deploy # Step 4
+      id: deploy
+      uses: sma11black/hexo-action@v1.0.1
+      with:
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
+        user_name: aucub #你 GitHub 用户名。如果去除该行则使用 bot。去除该行是不推荐行为。
+        user_email: 1279921277@qq.com #你 GitHub 邮箱。如果去除该行则使用 bot。去除该行是不推荐行为。
+        commit_msg: ${{ github.event.head_commit.message }} #Hexo 部署博客的自动提交备注
