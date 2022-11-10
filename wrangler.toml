@@ -1,6 +1,6 @@
 name = "blog"
 type = "webpack"
-usage_model = 'Free'
+usage_model = 'bundled'
 account_id = "0c25235045ad6791c9b6c99531934bc2"
 compatibility_flags = []
 workers_dev = true
