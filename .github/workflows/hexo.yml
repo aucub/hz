@@ -16,13 +16,13 @@ jobs:
       # check it to your workflow can access it
       # from: https://github.com/actions/checkout
       - name: Checkout Repository master branch
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
       # from: https://github.com/actions/setup-node
-      - name: Setup Node.js 18.x
+      - name: Setup Node.js 16.x
         uses: actions/setup-node@master
         with:
-          node-version: "18.x"
+          node-version: "16.x"
 
       # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.) 缓存压缩 node_modules，不用每次下载，使用时解压，可以加快工作流的执行过程，超过 7 天没有使用将删除压缩包。
       - name: Cache node modules 
