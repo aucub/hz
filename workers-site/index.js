@@ -1,92 +1,77 @@
-import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler'
+import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler';
 
-/**
- * The DEBUG flag will do two things that help during development:
- * 1. we will skip caching on the edge, which makes it easier to
- *    debug.
- * 2. we will return an error message on exception in your Response rather
- *    than the default 404.html page.
- */
-const DEBUG = false
-
-addEventListener('fetch', event => {
-  try {
-    event.respondWith(handleEvent(event))
-  } catch (e) {
-    if (DEBUG) {
-      return event.respondWith(
-        new Response(e.message || e.toString(), {
-          status: 500,
-        }),
-      )
+addEventListener('fetch', (event) => {
+    try {
+        event.respondWith(handleEvent(event));
+    } catch (e) {
+        event.respondWith(new Response('Internal Error', { status: 500 }));
     }
-    event.respondWith(new Response('Internal Error', { status: 500 }))
-  }
-})
+});
 
 async function handleEvent(event) {
-  const url = new URL(event.request.url)
-  let options = {}
+    const url = new URL(event.request.url);
+    const { origin, pathname: path, search } = new URL(event.request.url);
+    let options = {};
 
-  /**
-   * You can add custom logic to how we fetch your assets
-   * by configuring the function `mapRequestToAsset`
-   */
-  // options.mapRequestToAsset = handlePrefix(/^\/docs/)
+    try {
+        // 将 `/index.html` 结尾的请求重定向至 `/`
+        if (path.endsWith('/index.html')) {
+            return new Response(null, {
+                status: 301,
+                headers: {
+                    Location: `${origin}${path.substring(0, path.length - 10)}${search}`,
+                    'Cache-Control': 'max-age=3600',
+                },
+            });
+        }
 
-  try {
-    if (DEBUG) {
-      // customize caching
-      options.cacheControl = {
-        bypassCache: true,
-      };
-    }
-    const page = await getAssetFromKV(event, options);
+        // 手动提高 RSS 页面的缓存 TTL
+        /*if (path === '/atom.xml') {
+            return getAssetFromKV(event, {
+                cacheControl: {
+                    edgeTtl: 6 * 60 * 60,
+                    browserTtl: 12 * 60 * 60,
+                    cacheEverything: true,
+                },
+            });
+        }*/
 
-    // allow headers to be altered
-    const response = new Response(page.body, page);
+        // CSS 文件超长时间缓存
+        if (path.startsWith('/css/')) {
+            const response = await getAssetFromKV(event, {
+                cacheControl: {
+                    edgeTtl: 365 * 24 * 60 * 60,
+                    browserTtl: 365 * 24 * 60 * 60,
+                    cacheEverything: true,
+                },
+            });
+            response.headers.set('cache-control', `public, max-age=${365 * 24 * 60 * 60}, immutable`);
+            return response;
+        }
 
-    response.headers.set("X-XSS-Protection", "1; mode=block");
-    response.headers.set("X-Content-Type-Options", "nosniff");
-    response.headers.set("X-Frame-Options", "DENY");
-    response.headers.set("Referrer-Policy", "unsafe-url");
-    response.headers.set("Feature-Policy", "none");
+        // 其余默认 4 小时 CDN 缓存、1 小时浏览器缓存
+        const response = await getAssetFromKV(event, {
+            cacheControl: {
+                edgeTtl: 4 * 60 * 60,
+                browserTtl: 60 * 60,
+                cacheEverything: true,
+            },
+        });
 
-    return response;
+        response.headers.set('X-XSS-Protection', '1; mode=block');
 
-  } catch (e) {
-    // if an error is thrown try to serve the asset at 404.html
-    if (!DEBUG) {
-      try {
+        // Server Push 样式文件
+        if (response.headers.get("Content-Type").includes('text/html')) {
+            response.headers.append('Link', '</css/main.css>; rel=preload; as=style');
+        }
+
+        return response;
+    } catch (e) {
+        // 未找到资源，返回 404 页面
         let notFoundResponse = await getAssetFromKV(event, {
-          mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
-        })
+            mapRequestToAsset: (req) => new Request(`${new URL(req.url).origin}/404.html`, req),
+        });
 
-        return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 })
-      } catch (e) {}
+        return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 });
     }
-
-    return new Response(e.message || e.toString(), { status: 500 })
-  }
-}
-
-/**
- * Here's one example of how to modify a request to
- * remove a specific prefix, in this case `/docs` from
- * the url. This can be useful if you are deploying to a
- * route on a zone, or if you only want your static content
- * to exist at a specific path.
- */
-function handlePrefix(prefix) {
-  return request => {
-    // compute the default (e.g. / -> index.html)
-    let defaultAssetKey = mapRequestToAsset(request)
-    let url = new URL(defaultAssetKey.url)
-
-    // strip the prefix from the path for lookup
-    url.pathname = url.pathname.replace(prefix, '/')
-
-    // inherit all other props from the default request
-    return new Request(url.toString(), defaultAssetKey)
-  }
 }
