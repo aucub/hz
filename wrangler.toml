@@ -4,5 +4,5 @@ usage_model = 'unbound'
 account_id = "0c25235045ad6791c9b6c99531934bc2"
 compatibility_flags = []
 workers_dev = true
-site = {bucket = "./public"}
+site = {bucket = "./public",entry-point = "workers-site"}
 compatibility_date = "2022-11-10"
