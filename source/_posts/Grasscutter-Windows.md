@@ -3,20 +3,20 @@ title: Grasscutter-Windows
 tags:
   - Grasscutter
   - Windows
-keywords: Grasscutter,Windows,Genshin Impact,3.2
+keywords: Grasscutter,Windows,Genshin Impact
 abbrlink: 60991
 date: 2022-09-13 21:03:51
-updated: 2022-10-04 21:54:08
+updated: 2023-01-22 11:04:04
 ---
-Grasscutter割草机在Windows上的部署
+Grasscutter在Windows上的安装
 <!-- more -->
 ### 准备需要使用的文件和应用
 
 1.[下载并解压Grasscutter源代码（按需求选择版本）](https://github.com/Grasscutters/Grasscutter)         
-2.[下载对应版本的Grasscutter_Resources](https://github.com/tamilpp25/Grasscutter_Resources) | [3.1.50](https://github.com/snoobi-seggs/nahida_seggs/tree/master/resources)  
-3.下载并[安装MongoDB Community Server](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.2-signed.msi)，如无修改安装目录的需求一路点确认即可。
+2.[下载对应版本的Grasscutter_Resources](https://gitlab.com/YuukiPS/GC-Resources)
+3.下载并[安装MongoDB Community Server](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.4-signed.msi)，如无修改安装目录的需求一路点确认即可。
 
-4.准备op非大陆版本的客户端，建议登陆一次，下载需要更新的资源，大陆版本也可。本文以非大陆版本为例，~~GenshinImpact.exe~~路径为~~C:\Program Files\Genshin Impact\GenshinImpact.exe~~,路径问题请自行转换。[3.1.50](https://pan.baidu.com/s/1vg54kSPO2Si86s2zoIS0pg?pwd=wcop)
+4.准备op非大陆版本的客户端，建议登陆一次，下载需要更新的资源，大陆版本也可。本文以非大陆版本为例，~~GenshinImpact.exe~~路径为~~C:\Program Files\Genshin Impact\GenshinImpact.exe~~。
 
 5.安装JDK17，并加入环境变量。
 
@@ -34,8 +34,7 @@ winget install Python.Python.3
 pip install mitmdump
 ```
 
-7.下载global-metadata.dat或者UserAssembly.dll文件(可使用启动器)[Grasscutters Cultivation9.26编译版本](https://drive.google.com/file/d/1eLRbtdSdKlSUeoE2yh_dNssXE35NNkhL/view?usp=sharing) | [YuukiPS Launcher](https://github.com/akbaryahya/YuukiPS-Launcher) | [Collei_Launcher](https://github.com/Bambi5/Collei_Launcher)
-
+7.下载global-metadata.dat或者UserAssembly.dll文件(可使用启动器)[Grasscutters Cultivation](https://github.com/Grasscutters/Cultivation) | [YuukiPS Launcher](https://github.com/akbaryahya/YuukiPS-Launcher)
 ## 制作
 
 1.进入解压好的Grasscutter源代码文件夹，空白处右键选择在终端中打开，或者在文件路径栏输入cmd回车，输入以下命令（确保JDK版本正确不然会报错）：
@@ -45,12 +44,12 @@ pip install mitmdump
 .\gradlew jar
 ```
 
-编译完成将生成jar文件，文件名如grasscutter-1.2.3-dev.jar，将其重命名为grasscutter.jar
+编译完成将生成jar文件，文件名如grasscutter-1.4.3-dev.jar，将其重命名为grasscutter.jar
 
-可以使用编译好的jar文件，版本正确即可。[Grasscutter](https://github.com/Grasscutters/Grasscutter/releases) | [3.1.50](https://github.com/snoobi-seggs/nahida_seggs/blob/master/grasscutter-1.2.3-dev.jar)       
+可以使用编译好的jar文件，版本正确即可。[Grasscutter](https://github.com/Grasscutters/Grasscutter/releases)       
 2.在Grasscutter源代码文件夹新建resources文件夹，将Grasscutter_Resources\Resources下的文件夹全部移动至Grasscutter\resources目录下。
 
-### 开始部署
+### 开始安装
 
 1.依然是Grasscutter文件夹，空白处右键选择在终端中打开，或者在文件路径栏输入cmd回车，输入以下命令（不要关闭窗口）：
 
@@ -118,8 +117,3 @@ Genshin Impact
 ```shell
 /give all c6 r5 lv90 x99999
 ```
-
-
-### 部署失败问题
-
-部署失败的很多，通常与jar文件是否可用，文件的对应版本是否一致或正确，客户端是否正确修改等等有关，如果遇到难以解决的问题除了向专业人士请教或使用搜索引擎外，您也可以尝试使用Linux服务器部署，您可以使用一键脚本或docker(推荐[DockerGS](https://github.com/akbaryahya/DockerGS))等工具部署，其部署方式简单且成功率高。

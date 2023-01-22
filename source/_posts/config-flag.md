@@ -1,9 +1,9 @@
 ---
-title: Firefox，Edge高级设置
+title: Firefox，Edge的一些高级设置选项
 keywords: 'edge://flags,about:config'
 abbrlink: 908ef1c
 date: 2022-10-22 11:21:21
-updated: 2022-10-22 11:21:21
+updated: 2023-01-22 12:20:20
 tags:
 ---
 Firefox部分about:config设置，Edge部分flags特性设置
@@ -13,8 +13,6 @@ Firefox部分about:config设置，Edge部分flags特性设置
 双击关闭标签页（默认为True）`browser.tabs.closeTabByDblclick`
 
 支持多标签页管理，使用 Ctrl 和 Shift控制`browser.tabs.multiselect`
-
-同步所有首选项`services.sync.prefs.dangerously_allow_arbitrary`
 
 设置内置页面暗色调`browser.in-content.dark-mode`
 
@@ -28,17 +26,13 @@ Firefox部分about:config设置，Edge部分flags特性设置
 
 右键保存到 pocket（设置False隐藏）`extensions.pocket.enabled`
 
-数据收集 `about:telemetry`  详情访问[about:telemetry](about:telemetry)
-
-发现`browser.discovery.enabled`
-
 同步设备名`identity.fxaccounts.account.device.name`
 
 列出所有标签页按钮常驻`browser.tabs.tabmanager.enabled`
 
 设置书签在新标签页中打开`browser.tabs.loadBookmarksInTabs`  
 
-在 Firefox 官方界面使用插件`extensions.webextensions.restrictedDomains`
+在所有页面使用插件`extensions.webextensions.restrictedDomains`
 
 禁用WebRTC将其设置为“false”`media.peerconnection.enabled`
 
@@ -56,8 +50,6 @@ Firefox部分about:config设置，Edge部分flags特性设置
 
 搜索引擎固定建议`browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned`
 
-同上`browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines`  
-
 ## Edge部分flags特性设置  
 
 ### Edge桌面版部分flags特性设置  
@@ -68,7 +60,7 @@ quic启用`edge://flags/#enable-quic`
 
 并行下载`edge://flags/#enable-parallel-downloading`
 
-https自动升级`edge://flags/#edge-automatic-https`
+自动https`edge://flags/#edge-automatic-https`
 
 实验性外观`edge://flags/#edge-visual-rejuv-show-settings`
 
@@ -76,7 +68,19 @@ https自动升级`edge://flags/#edge-automatic-https`
 
 悬浮滚动条`edge://flags/#edge-overlay-scrollbars-win-style`
 
-菜单亚克力效果`edge://flags/#edge-visual-rejuv-materials-menu`  
+菜单亚克力效果`edge://flags/#edge-visual-rejuv-materials-menu` 
+
+扩展在所有页面生效`edge://flags/#extensions-on-edge-urls`
+
+mica效果`edge://flags/#edge-visual-rejuv-mica`
+
+圆角效果`edge://flags/#edge-visual-rejuv-rounded-tabs`
+
+DRM视频`edge://flags/#edge-playready-drm-win10`
+
+流畅pdf`edge://flags/#edge-smooth-scrolling-enabled-pdf`
+
+新pdf阅读器`edge://flags/#edge-new-pdf-viewer`
 
 ### Edge安卓版部分flags特性设置 
 
@@ -90,14 +94,12 @@ vulkan启用`edge://flags/#enable-vulka`
 
 并行下载`edge://flags/#enable-parallel-downloading`
 
-阻止自动播放设置`edge://flags/#edge-autoplay-user-setting-block-option`
-
 开启广告手动标记选项`edge://flags/#edge-tag-ads`
 
 手动标记广告即时关闭`edge://flags/#edge-tag-ads-silent`
 
 返回，前进不重载缓存`edge://flags/#back-forward-cache`
 
-https自动升级`edge://flags/#edge-automatic-https`
+自动https`edge://flags/#edge-automatic-https`
 
 写作助手`edge://flags/#edge-writing-assistant-android`
