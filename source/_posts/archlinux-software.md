@@ -1,13 +1,15 @@
 ---
 title: ArchLinux 软件分享
 keywords: ArchLinux,Linux,Gnome,GUI,CLI,software,pacman,aur
+abbrlink: 7a6f3fec
 date: 2023-01-25 09:36:36
+updated: 2023-01-25 22:02:02
 tags:
   - Linux
 ---
 推荐一些个人使用的 ArchLinux 软件
 <!-- more -->
-使用 ArchLinux 一段时间了，安装了很多软件，想和大家分享一下,使用的桌面环境是 Gnome,所以会偏向 GTK 软件,软件名称参考 pacman 和 aur 仓库
+使用 ArchLinux 一段时间了，安装了很多软件，和大家分享一下,使用的桌面环境是 Gnome,所以会偏向 GTK 软件,软件名称参考 pacman 和 aur 仓库
 ## 桌面个性化
 
 ### GTK主题
@@ -28,7 +30,7 @@ tags:
 
 [qt5ct](https://qt5ct.sourceforge.io/) - Qt5 配置实用程序。
 
-[kvantum](https://github.com/tsujan/Kvantum)) - 用于 Qt5/6 的基于 SVG 的主题引擎（包括配置工具和额外的主题）。
+[kvantum](https://github.com/tsujan/Kvantum) - 用于 Qt5/6 的基于 SVG 的主题引擎（包括配置工具和额外的主题）。
 
 [lightly-qt](https://github.com/Luwx/Lightly) - qt 应用程序的现代风格主题 。
 
@@ -153,7 +155,7 @@ tags:
 
 ## 其它
 
-[debtap](https://github.com/helixarch/debtap) - 将 .deb 包转换为 Arch Linux 包的脚本，专注于准确性。
+[debtap](https://github.com/helixarch/debtap) - 将 .deb 包转换为 Arch Linux 包的脚本。
 
 [envycontrol](https://github.com/bayasdev/envycontrol) - 在 Linux 下为 Nvidia Optimus 笔记本电脑轻松切换 GPU。
 
