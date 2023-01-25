@@ -7,8 +7,7 @@ tags:
 ---
 推荐一些个人使用的 ArchLinux 软件
 <!-- more -->
-使用 ArchLinux 一段时间了，安装了很多软件，想和大家分享一下。
-使用的桌面环境是 Gnome,所以会偏向 GTK 软件,软件名称参考 pacman 和 aur 仓库。
+使用 ArchLinux 一段时间了，安装了很多软件，想和大家分享一下,使用的桌面环境是 Gnome,所以会偏向 GTK 软件,软件名称参考 pacman 和 aur 仓库
 ## 桌面个性化
 
 ### GTK主题
