@@ -5,6 +5,8 @@ abbrlink: 908ef1c
 date: 2022-10-22 11:21:21
 updated: 2023-01-22 12:20:20
 tags:
+  - Windows
+  - Android
 ---
 Firefox部分about:config设置，Edge部分flags特性设置
 <!-- more -->
