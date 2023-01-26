@@ -2,6 +2,8 @@
 title: {{ title }}
 date: {{ date }}
 updated: {{ date }}
-tags:
+archive: false
+hide: false
 keywords:
+tags:
 ---

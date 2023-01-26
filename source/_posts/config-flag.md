@@ -4,6 +4,7 @@ keywords: 'edge://flags,about:config'
 abbrlink: 908ef1c
 date: 2022-10-22 11:21:21
 updated: 2023-01-22 12:20:20
+hide: true
 tags:
   - Windows
   - Android
@@ -12,7 +13,7 @@ Firefox部分about:config设置，Edge部分flags特性设置
 <!-- more -->
 ## Firefox部分about:config选项设置  
 
-双击关闭标签页（默认为True）`browser.tabs.closeTabByDblclick`
+双击关闭标签页`browser.tabs.closeTabByDblclick`
 
 支持多标签页管理，使用 Ctrl 和 Shift控制`browser.tabs.multiselect`
 
@@ -29,8 +30,6 @@ Firefox部分about:config设置，Edge部分flags特性设置
 右键保存到 pocket（设置False隐藏）`extensions.pocket.enabled`
 
 同步设备名`identity.fxaccounts.account.device.name`
-
-列出所有标签页按钮常驻`browser.tabs.tabmanager.enabled`
 
 设置书签在新标签页中打开`browser.tabs.loadBookmarksInTabs`  
 
