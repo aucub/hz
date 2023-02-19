@@ -50,7 +50,3 @@ jobs:
           publish_dir: ./public
           commit_message: deploy githubPage
           # commit_message: ${{ github.event.head_commit.message }}
-      - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@2.0.0
-        with:
-          apiToken: ${{ secrets.CF_WORKERS_TOKEN }}
