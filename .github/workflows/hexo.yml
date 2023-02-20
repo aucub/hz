@@ -37,4 +37,4 @@ jobs:
           external_repository: aucub/aucub.github.io
           publish_branch: master
           publish_dir: ./public
-          commit_message: ${{ github.event.head_commit.message }}
+          commit_message: update
