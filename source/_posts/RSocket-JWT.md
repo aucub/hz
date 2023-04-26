@@ -7,7 +7,6 @@ keywords: RSocket,JWT
 date: 2023-04-26 21:03:51
 updated: 2023-04-26 21:03:51
 ---
-Spring RSocket使用JWT
 <!-- more -->
 
 本文将介绍如何在Spring RSocket中使用JWT进行身份验证和授权。

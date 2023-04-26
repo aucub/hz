@@ -7,7 +7,6 @@ keywords: Btrfs,partition
 date: 2023-03-31 21:03:51
 updated: 2023-03-31 21:03:51
 ---
-一次移动分区的尝试
 <!-- more -->
 
 一开始是在存在Windows的硬盘安装的Arch,后来删除了Windows,由于Arch处在硬盘末尾不能向右扩展了，意味着原来Windows的空间无法使用。
