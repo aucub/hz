@@ -3,7 +3,7 @@ title: ArchLinux 软件分享
 keywords: ArchLinux,Linux,Gnome,GUI,CLI,software,pacman,aur
 abbrlink: 7a6f3fec
 date: 2023-01-25 09:36:36
-updated: 2023-01-25 22:02:02
+updated: 2023-04-26 22:02:02
 tags:
   - Linux
 ---
@@ -84,6 +84,8 @@ tags:
 
 [motrix](https://github.com/agalwood/Motrix) - Motrix 是一款全能的下载工具，支持下载 HTTP、FTP、BT、磁力链等资源，界面简洁易用。
 
+[Gopeed](https://gopeed.com/zh-CN) - 一款支持全平台的下载器，开源、轻量、原生，支持（HTTP、BitTorrent、Magnet 等）协议下载。
+
 ## 视频
 
 [celluloid](https://celluloid-player.github.io/) - Celluloid 是一个简单的 GTK+ mpv 的前端。易于使用，同时保持高水平的可配置性。 
@@ -131,6 +133,12 @@ tags:
 
 [fsearch](https://cboxdoerfer.github.io/fsearch) - 一个快速的文件搜索GUI实用程序。
 
+## 启动器
+
+[Catapult](https://github.com/otsaloma/catapult) - Linux 的应用程序启动器。
+
+[Fuzzel](https://codeberg.org/dnkl/fuzzel) - Fuzzel 是一个 Wayland 原生的应用程序启动器。
+
 ## 命令行工具
 
 [fd](https://github.com/sharkdp/fd) - 一个替代 find 的简单、快速和用户友好的方案。
@@ -149,6 +157,8 @@ tags:
 
 [ncdu](https://dev.yorhel.nl/ncdu) - 带有 ncurses 接口的磁盘使用分析器。
 
+[s-tui](https://github.com/amanusk/s-tui) - 从终端以图形方式监控 CPU 温度、频率、功率和利用率。
+
 [nvtop](https://github.com/Syllo/nvtop) - AMD、Intel 和 NVIDIA 的 GPU 进程监控。
 
 [stacer](https://github.com/oguzhaninan/Stacer) - 系统优化器。
@@ -160,3 +170,5 @@ tags:
 [envycontrol](https://github.com/bayasdev/envycontrol) - 在 Linux 下为 Nvidia Optimus 笔记本电脑轻松切换 GPU。
 
 [chezmoi](https://www.chezmoi.io/) - 跨多台机器管理点文件。
+
+[yadm](https://yadm.io/) - 另一个点文件管理器。
