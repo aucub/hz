@@ -873,7 +873,7 @@ giscus:
   category-id: DIC_kwDOGUcwVM4CTz4P
   theme-light: light_protanopia
   theme-dark: dark_protanopia
-  mapping: pathname
+  mapping: title
   reactions-enabled: 1
   emit-metadata: 0
   input-position: top
