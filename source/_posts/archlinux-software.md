@@ -3,7 +3,7 @@ title: ArchLinux 软件分享
 keywords: ArchLinux,Linux,Gnome,GUI,CLI,software,pacman,aur
 abbrlink: 7a6f3fec
 date: 2023-01-25 09:36:36
-updated: 2023-04-26 22:02:02
+updated: 2023-07-15 20:10:10
 tags:
   - Linux
 ---
@@ -16,15 +16,9 @@ tags:
 
 [orchis-theme](https://github.com/vinceliuice/Orchis-theme) - Orchis 是基于 GNOME/GTK 的桌面环境的 Material Design 主题。
 
-[fluent-gtk-theme](https://github.com/vinceliuice/Fluent-gtk-theme) - Fluent 是基于 GNOME/GTK 的桌面环境的 Fluent Design 风格主题。 
-
-[adw-gtk-theme](https://aur.archlinux.org/packages/adw-gtk-theme) - 适用于所有 GTK3 和 GTK4 应用程序的 LibAdwaita 主题。 它使用 adw-gtk3 用于 GTK3 和官方 LibAdwaita 主题用于 GTK4 。
-
-[adw-gtk3](https://github.com/lassekongo83/adw-gtk3) - libadwaita 的主题移植到 GTK-3 。
-
 ### Gnome-Shell主题
 
-[flat-remix-gnome](https://drasite.com/flat-remix-gnome) - Flat Remix 是受 Material Design 启发的 GNOME Shell 主题。
+[Marble shell theme](https://github.com/imarkoff/Marble-shell-theme) - Shell theme for GNOME DE。
 
 ### Qt主题
 
@@ -32,7 +26,7 @@ tags:
 
 [kvantum](https://github.com/tsujan/Kvantum) - 用于 Qt5/6 的基于 SVG 的主题引擎（包括配置工具和额外的主题）。
 
-[lightly-qt](https://github.com/Luwx/Lightly) - qt 应用程序的现代风格主题 。
+[orchis-kde-theme-git](https://github.com/vinceliuice/Orchis-kde) - Orchis kde 是 KDE Plasma 桌面的 materia Design 主题。
 
 ### 图标主题
 
@@ -40,13 +34,11 @@ tags:
 
 [papirus-folders-git](https://github.com/PapirusDevelopmentTeam/papirus-folders) - 允许papirus-icon-theme更改文件夹的颜色。
 
-[fluent-icon-theme-git](https://www.pling.com/p/1477945) -  Fluent Design风格图标主题 
-
 ### 鼠标指针主题
 
 [vimix-cursors](https://github.com/vinceliuice/Vimix-cursors) - 这是一个受 Material Design 启发的 x 光标主题， 基于 capitaine-cursors。 
 
-[capitaine-cursors](https://github.com/keeferrourke/capitaine-cursors) - 这是一个受 macOS 启发并基于 KDE Breeze 的 x 光标主题。
+[bibata-cursor-theme](https://github.com/ful1e5/Bibata_Cursor) - Bibata 是一个开源、紧凑、Material Design的光标集，旨在改善用户的光标体验。
 
 ### fcitx5皮肤
 
@@ -54,7 +46,7 @@ tags:
 
 ### 桌面壁纸
 
-[variety](https://peterlevi.com/variety/) - 使用用户指定或自动下载的图像定期更换墙纸。
+[damask-wallpaper](https://gitlab.gnome.org/subpop/damask) - 自动设置来自互联网来源的壁纸图像 。
 
 ### GDM设置
 
@@ -66,11 +58,11 @@ tags:
 
 [gnome-shell-extension-blur-my-shell](https://github.com/aunetx/blur-my-shell) - 为 GNOME Shell 的不同部分添加模糊外观。
 
-[gnome-shell-extension-dash-to-dock](https://micheleg.github.io/dash-to-dock/) - Dash to dock 扩展是 GNOME Shell 的 增强 dash。
-
 [gnome-shell-extension-gpu-profile-selector-git](https://github.com/LorenzoMorelli/GPU_profile_selector) - 一个简单的 gnome-shell 扩展，只需单击几下即可在 Nvidia Optimus 系统上的 GPU 配置文件之间切换。
 
 [gnome-shell-extension-just-perfection-desktop](https://gitlab.gnome.org/jrahmatzadeh/just-perfection) - 禁用 GNOME Shell UI 元素、更改行为和自定义 GNOME Shell 桌面。
+
+[gnome-shell-extension-search-light-git](https://github.com/icedman/search-light) - 在概览之外搜索应用程序。
 
 ## 文件共享
 
@@ -91,6 +83,10 @@ tags:
 [celluloid](https://celluloid-player.github.io/) - Celluloid 是一个简单的 GTK+ mpv 的前端。易于使用，同时保持高水平的可配置性。 
 
 [clapper](https://github.com/Rafostar/clapper) - 一个 GNOME 视频播放器，使用带有 GTK4 工具包的 GJS 构建，由带有 OpenGL 渲染的 GStreamer 提供支持。 
+
+## 图像
+
+[gthumb](https://gitlab.gnome.org/GNOME/gthumb) - 适用于 GNOME 环境的图像查看器和浏览器实用程序。 
 
 ## 终端
 
@@ -135,6 +131,10 @@ tags:
 
 ## 启动器
 
+[kupfer](https://github.com/kupferlauncher/kupfer) - 一个智能、快速的启动器。
+
+[kickoff](https://github.com/j0ru/kickoff) - 简约的程序启动器。
+
 [Catapult](https://github.com/otsaloma/catapult) - Linux 的应用程序启动器。
 
 [Fuzzel](https://codeberg.org/dnkl/fuzzel) - Fuzzel 是一个 Wayland 原生的应用程序启动器。
@@ -153,7 +153,11 @@ tags:
 
 [helix](https://helix-editor.com) - 后现代文本编辑器。
 
+[lapce](https://github.com/lapce/lapce) - 用 Rust 编写的闪电般快速且强大的代码编辑器。
+
 ## 系统监控
+
+[procs](https://github.com/dalance/procs) - 用 Rust 编写的 ps 的现代替代品。
 
 [ncdu](https://dev.yorhel.nl/ncdu) - 带有 ncurses 接口的磁盘使用分析器。
 
