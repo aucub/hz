@@ -867,13 +867,14 @@ giscus:
   repo-id: R_kgDOGUcwVA
   category: Announcements
   category-id: DIC_kwDOGUcwVM4CTz4P
-  theme-light: light_protanopia
-  theme-dark: dark_protanopia
+  theme-light: noborder_light
+  theme-dark: noborder_dark
   mapping: title
   reactions-enabled: 1
   emit-metadata: 0
   input-position: top
   lang: zh-CN
+  data-loading: eager
 
 # Discuss
 # 多平台、多数据库、自托管、免费开源评论系统
