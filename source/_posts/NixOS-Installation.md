@@ -128,7 +128,19 @@ Rufus是一款值得称道的软件，它的功能丰富，操作简便，可以
 对于时区的设置，您可以使用NixOS的配置文件来实现，代码如下：
 
 ```Nix
-time.timezone = "Asia/Shanghai";
+time = {
+  timeZone = "Asia/Shanghai";
+  hardwareClockInLocalTime = true; # 使用本地时间作为硬件时间，像Windows那样
+};
+```
+
+对于中文语言的设置，代码如下：
+
+```Nix
+i18n = {
+  defaultLocale = "zh_CN.UTF-8"; 
+  supportedLocales = [ "zh_CN.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];
+};
 ```
 
 而对于用户和密码的设置，您可以通过NixOS的配置文件来添加用户和设置密码，代码如下：
@@ -140,15 +152,58 @@ users.users.<用户名> = {
 };
 ```
 
+对于zsh设置，代码如下：
+
+```Nix
+programs = {
+  zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions = {
+      enable = true;
+      strategy = [ "history" ]; 
+    };
+  };
+};
+```
+
+对于启动设置，代码如下：
+
+```Nix
+boot = {
+  kernelPackages = pkgs.linuxPackages_lqx; # 使用Liquorix Kernel
+  loader = {
+    grub = {
+      enable = true;
+      device = "/dev/nvme0n1";
+      configurationLimit = lib.mkDefault 5; # 限制启动列表数目
+    };
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
+    };
+  };
+  initrd.kernelModules = [ "btrfs" ];
+  kernelModules = [
+    "fuse"
+    "v4l2loopback"
+  ];
+  extraModulePackages = [
+    pkgs.linuxKernel.packages.linux_lqx.v4l2loopback # 虚拟摄像头支持
+  ];
+  extraModprobeConfig = ''
+    options v4l2loopback exclusive_caps=1 video_nr=9 card_label="obs"
+  '';
+};
+```
+
 需要注意的是，这些代码片段只是示例，您需要根据自己的具体情况进行修改和设置。
 
 在NixOS的配置文件中，您可以设置很多不同的选项，例如：
 
-- `boot.loader.grub.device`：确定GRUB引导加载器的安装位置。
 - `boot.loader.grub.timeout`：设置GRUB启动菜单的超时时间。
 - `networking.hostName`：设置主机名。
 - `services.xserver.enable`：启用X Window System服务。
-- `security.sudo.extraConfig`：添加额外的sudo配置。
 
 通过这些选项，您可以更好地掌握NixOS的配置和管理技巧。
 
