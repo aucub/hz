@@ -74,21 +74,22 @@ echo "6285cc9161b02b093849f27c50bdea06a495bcb1d61881ba977bd11625972ad6  nixos-pl
 
 与光盘相比，使用U盘进行安装则是一种更为现代的方式。如果你有一个空闲的U盘，那么将下载的ISO文件写入到U盘上将会是非常适合的。同样的，你需要准备一个写入工具，并选择下载的ISO文件作为源文件，选择空闲的U盘作为目标设备，随后开始写入。
 不同平台的写入工具有所不同：
-  - 多平台  
+- 多平台  
   
-          Ventoy 是一个功能丰富的开源工具，支持多种类型的操作系统，包括 Windows和Linux。Ventoy 提供了许多功能，例如 Linux 持久性支持、Windows 自动安装支持、Linux 自动安装支持、变量扩展支持、Windows/Linux 自动安装脚本、主分区支持 FAT32/exFAT/NTFS/UDF/XFS/Ext2(3)(4)、支持大于 4GB 的 ISO 文件、菜单别名、菜单提示消息支持、密码保护支持、Legacy 和 UEFI 的本地启动菜单样式等等。Ventoy 还支持多种架构，包括 x86 Legacy BIOS、IA32 UEFI、x86_64 UEFI、ARM64 UEFI 和 MIPS64EL UEFI，可以满足不同用户的需求。此外，Ventoy 还经过了严格测试，支持超过 1100 个 iso 文件和 Linux vDisk (vhd/vdi/raw...) 启动解决方案，并支持菜单在 ListView 和 TreeView 模式之间动态切换。 
+Ventoy 是一个功能丰富的开源工具，支持多种类型的操作系统，包括 Windows和Linux。Ventoy 提供了许多功能，例如 Linux 持久性支持、Windows 自动安装支持、Linux 自动安装支持、变量扩展支持、Windows/Linux 自动安装脚本、主分区支持 FAT32/exFAT/NTFS/UDF/XFS/Ext2(3)(4)、支持大于 4GB 的 ISO 文件、菜单别名、菜单提示消息支持、密码保护支持、Legacy 和 UEFI 的本地启动菜单样式等等。Ventoy 还支持多种架构，包括 x86 Legacy BIOS、IA32 UEFI、x86_64 UEFI、ARM64 UEFI 和 MIPS64EL UEFI，可以满足不同用户的需求。此外，Ventoy 还经过了严格测试，支持超过 1100 个 iso 文件和 Linux vDisk (vhd/vdi/raw...) 启动解决方案，并支持菜单在 ListView 和 TreeView 模式之间动态切换。 
 
-          USBImager 是一个非常简单易用的 GUI 应用程序，可以将压缩的磁盘映像写入 USB 驱动器并创建备份。USBImager 支持 Windows、MacOS 和 Linux 平台，使用时无需安装，只需解压存档即可使用，非常方便。它的界面非常简单，没有多余的东西，只有必要的功能，而且不依赖于其他软件。
+USBImager 是一个非常简单易用的 GUI 应用程序，可以将压缩的磁盘映像写入 USB 驱动器并创建备份。USBImager 支持 Windows、MacOS 和 Linux 平台，使用时无需安装，只需解压存档即可使用，非常方便。它的界面非常简单，没有多余的东西，只有必要的功能，而且不依赖于其他软件。
 
-          balenaEtcher 是一款免费开源图像刻录器，支持 Windows、macOS 和 GNU/Linux。它可以帮助用户轻松快速地刻录 USB 和 SD 卡图像，而且非常易于使用。Etcher 给用户提供了一个直观的 3 步流程，不需要任何命令行，即可完成刻录过程。Etcher 还具有一些实用的功能，例如确认闪存已完成、默认隐藏系统驱动器以避免意外擦除整个硬盘驱动器等等。Etcher 建立在开源工具之上，包括 JS、HTML、node.js 和 Electron 等，始终是免费和开源使用的，可以满足不同用户的需求。
-  - Windows
+balenaEtcher 是一款免费开源图像刻录器，支持 Windows、macOS 和 GNU/Linux。它可以帮助用户轻松快速地刻录 USB 和 SD 卡图像，而且非常易于使用。Etcher 给用户提供了一个直观的 3 步流程，不需要任何命令行，即可完成刻录过程。Etcher 还具有一些实用的功能，例如确认闪存已完成、默认隐藏系统驱动器以避免意外擦除整个硬盘驱动器等等。Etcher 建立在开源工具之上，包括 JS、HTML、node.js 和 Electron 等，始终是免费和开源使用的，可以满足不同用户的需求。
+- Windows
   
-          Rufus是一款值得称道的软件，它的功能丰富，操作简便，可以帮助用户快速创建可引导的USB启动盘，让其能够在几分钟内完成新的操作系统的安装。此款软件的用途十分广泛，它不仅支持Windows、Linux、UEFI等操作系统的ISO文件创建USB安装媒体，还可以在没有安装操作系统的系统上工作，刷新BIOS或其他固件，以及运行低级实用程序等。此外，Rufus还提供了许多其他功能，例如支持多种语言、操作系统、文件格式、启动模式和分区方案等。其简单易用的界面和高效的功能使得用户能够在短时间内完成启动盘的创建。 
+Rufus是一款值得称道的软件，它的功能丰富，操作简便，可以帮助用户快速创建可引导的USB启动盘，让其能够在几分钟内完成新的操作系统的安装。此款软件的用途十分广泛，它不仅支持Windows、Linux、UEFI等操作系统的ISO文件创建USB安装媒体，还可以在没有安装操作系统的系统上工作，刷新BIOS或其他固件，以及运行低级实用程序等。此外，Rufus还提供了许多其他功能，例如支持多种语言、操作系统、文件格式、启动模式和分区方案等。其简单易用的界面和高效的功能使得用户能够在短时间内完成启动盘的创建。 
 
-  - Linux
+- Linux
   
-          [Impression](https://gitlab.com/adhami3310/Impression)是一个具有现代感的简约应用程序，其独特的功能和创新的设计使其成为创建可启动驱动器的理想工具。通过Impression，您可以轻松地将磁盘映像刷入您的驱动器，从而在您的电脑中创建一个全新的引导系统。Impression的出色性能和卓越的功能使其成为狂热的发行版跳跃者和普通计算机用户的必备工具。Impression的优越性不仅体现在其简单易用的操作界面上，还彰显在其卓越的技术实现中。Impression采用最先进的数据转换技术，将磁盘映像转换为可启动的驱动器，确保了映像的完整性和准确性。除了其出色的功能和技术实现，Impression还具有极高的可靠性和稳定性。它的源代码经过了严格的测试和验证，确保了其高效的性能和稳定的运行。在[Flathub](https://flathub.org/apps/io.gitlab.adhami3310.Impression)上，您可以找到更多关于Impression的信息和使用技巧。Impression是一个功能强大、易于使用、稳定可靠的应用程序，是创建可启动驱动器的最佳选择。
-          ![Impression](/images/Impression.png)
+[Impression](https://gitlab.com/adhami3310/Impression)是一个具有现代感的简约应用程序，其独特的功能和创新的设计使其成为创建可启动驱动器的理想工具。通过Impression，您可以轻松地将磁盘映像刷入您的驱动器，从而在您的电脑中创建一个全新的引导系统。Impression的出色性能和卓越的功能使其成为狂热的发行版跳跃者和普通计算机用户的必备工具。Impression的优越性不仅体现在其简单易用的操作界面上，还彰显在其卓越的技术实现中。Impression采用最先进的数据转换技术，将磁盘映像转换为可启动的驱动器，确保了映像的完整性和准确性。除了其出色的功能和技术实现，Impression还具有极高的可靠性和稳定性。它的源代码经过了严格的测试和验证，确保了其高效的性能和稳定的运行。在[Flathub](https://flathub.org/apps/io.gitlab.adhami3310.Impression)上，您可以找到更多关于Impression的信息和使用技巧。Impression是一个功能强大、易于使用、稳定可靠的应用程序，是创建可启动驱动器的最佳选择。 
+
+![Impression](/images/Impression.png)
 
 在写入完成后，你可以在目标机器上进行测试，以确保U盘能够正常启动。如果不能启动，可能是因为U盘格式不支持或者写入软件设置不正确等原因造成的。这时，你可以尝试格式化U盘或者调整写入参数重新写入，以确保你的安装过程无懈可击。
 
