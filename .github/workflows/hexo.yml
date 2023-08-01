@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.5.3
         with: # 条件
           submodules: true ## Checkout private submodules(themes or something else).
 
@@ -31,7 +31,7 @@ jobs:
 
       # 生成pages且推送到文件仓库 from https://github.com/peaceiris/actions-gh-pages
       - name: Deploy hexo to Github pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY }} # 此处为 hexo-deploy-key
           external_repository: aucub/aucub.github.io
