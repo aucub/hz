@@ -1,9 +1,6 @@
-# workflow name
 name: Deploy
 
-# 当有 push 到仓库和外部触发的时候就运行
 on: [push, repository_dispatch]
-
 
 jobs:
   build:
@@ -15,25 +12,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.3
-        with: # 条件
-          submodules: true ## Checkout private submodules(themes or something else).
+        with:
+          submodules: true # Checkout private submodules(themes or something else).
 
       - name: Install Dependencies
         run: |
           npm install hexo-cli -g
           npm install
 
-      # 生成可访问的文档
       - name: hexo generate
         run: |
           hexo clean
           hexo g
 
-      # 生成pages且推送到文件仓库 from https://github.com/peaceiris/actions-gh-pages
+      # 推送到仓库 from https://github.com/peaceiris/actions-gh-pages
       - name: Deploy hexo to Github pages
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
-          deploy_key: ${{ secrets.DEPLOY_KEY }} # 此处为 hexo-deploy-key
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
           external_repository: aucub/aucub.github.io
           publish_branch: master
           publish_dir: ./public

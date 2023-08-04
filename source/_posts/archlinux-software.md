@@ -3,7 +3,7 @@ title: ArchLinux 软件分享
 keywords: ArchLinux,Linux,Gnome,GUI,CLI,software,pacman,aur
 abbrlink: 7a6f3fec
 date: 2023-01-25 09:36:36
-updated: 2023-07-15 20:10:10
+updated: 2023-08-05 06:05:05
 tags:
   - Linux
 ---
@@ -62,7 +62,7 @@ tags:
 
 [gnome-shell-extension-just-perfection-desktop](https://gitlab.gnome.org/jrahmatzadeh/just-perfection) - 禁用 GNOME Shell UI 元素、更改行为和自定义 GNOME Shell 桌面。
 
-[gnome-shell-extension-search-light-git](https://github.com/icedman/search-light) - 在概览之外搜索应用程序。
+[gnome-shell-extension-kimpanel-git](https://github.com/wengxt/gnome-shell-extension-kimpanel) - GNOME Shell 的 KDE kimpanel 协议。
 
 ## 文件共享
 
@@ -159,7 +159,7 @@ tags:
 
 [procs](https://github.com/dalance/procs) - 用 Rust 编写的 ps 的现代替代品。
 
-[ncdu](https://dev.yorhel.nl/ncdu) - 带有 ncurses 接口的磁盘使用分析器。
+[dust](https://github.com/bootandy/dust) - rust 中 du 的更直观版本。
 
 [s-tui](https://github.com/amanusk/s-tui) - 从终端以图形方式监控 CPU 温度、频率、功率和利用率。
 
