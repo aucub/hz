@@ -1,10 +1,10 @@
 ---
 title: 使用Render部署FreeGPT WebUI和GPT4Free TypeScript Version
 keywords: Render,GPT
+abbrlink: ee021857
 date: 2023-08-02 03:14:14
 updated: 2023-08-02 03:14:14
 tags:
-  - Render
   - GPT
 ---
 

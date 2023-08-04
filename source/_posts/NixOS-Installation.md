@@ -1,6 +1,7 @@
 ---
 title: NixOS 安装教程
 keywords: NixOS,Linux
+abbrlink: b37fda7b
 date: 2023-07-30 23:04:04
 updated: 2023-07-30 23:04:04
 tags:

@@ -1,11 +1,13 @@
 ---
 title: 一次移动分区的尝试
-tags:
-  - Btrfs
-  - partition
 keywords: Btrfs,partition
+abbrlink: 8da451c
 date: 2023-03-31 21:03:51
 updated: 2023-03-31 21:03:51
+tags:
+  - Linux
+  - Btrfs
+  - partition
 ---
 <!-- more -->
 

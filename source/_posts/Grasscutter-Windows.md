@@ -1,12 +1,12 @@
 ---
 title: Grasscutter-Windows
-tags:
-  - Grasscutter
-  - Windows
 keywords: Grasscutter,Windows,Genshin Impact
 abbrlink: 60991
 date: 2022-09-13 21:03:51
 updated: 2023-01-22 11:04:04
+tags:
+  - Grasscutter
+  - Windows
 ---
 Grasscutter在Windows上的安装
 <!-- more -->

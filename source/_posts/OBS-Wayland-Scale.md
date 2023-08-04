@@ -1,12 +1,11 @@
 ---
 title: Gnome Wayland环境下设置OBS Studio缩放
 keywords: Gnome,Wayland,OBS
+abbrlink: dc187d12
 date: 2023-08-05 03:28:28
 updated: 2023-08-05 03:28:28
 tags:
-  - Gnome
-  - Wayland
-  - OBS
+  - Linux
 ---
 
 在GNOME Tweaks中，可以轻松地调整字体缩放比例，这个设置对于大部分应用程序都是有效的。但是OBS Studio是例外。OBS Studio是目前广泛使用的视频录制和流媒体平台之一，对其设置正确的字体缩放比例，可以提高观感体验。

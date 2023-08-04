@@ -1,11 +1,11 @@
 ---
 title: RSocket为数据和元数据设置序列化
-tags:
-  - RSocket
-  - Serialization
 keywords: RSocket,Serialization
+abbrlink: a9b88c97
 date: 2023-04-21 21:03:51
 updated: 2023-04-21 21:03:51
+tags:
+  - RSocket
 ---
 <!-- more -->
 
