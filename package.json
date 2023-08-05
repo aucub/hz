@@ -28,6 +28,7 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-fluid": "^1.9.4",
     "hexo-theme-landscape": "^1.0.0",
+    "hexo-uglify": "^2.0.0",
     "highlight.js": "^11.8.0"
   }
 }

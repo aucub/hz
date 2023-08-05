@@ -59,6 +59,12 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ""
+uglify:
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - "*.min.js"
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
