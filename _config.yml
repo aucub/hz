@@ -62,6 +62,25 @@ prismjs:
 hash:
   enable: true # 是否启用
   # 更多配置信息请看: https://github.com/Lete114/cache-hash
+# enable: 开启/关闭 推送
+# cron: 执行时间周期
+# count: 每次提交最新的10篇文章，输入0或者不填写则默认为所有文章(建议是最新的10篇文章)
+# date: 更新时间(updated)|创建日期(created)
+# https://github.com/Lete114/hexo-seo-autopush.git
+hexo_seo_autopush:
+  cron: 0 4 * * *
+  baidu:
+    enable: false
+    date: created
+    count: 10
+  bing:
+    enable: true
+    date: updated
+    count: 10
+  google:
+    enable: true
+    date: updated
+    count: 10
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

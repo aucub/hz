@@ -1,0 +1,6 @@
+deploy:
+  type: git
+  repo: https://github.com/aucub/aucub.github.io
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: gh-pages
+  ignore_hidden: false # 忽略隐藏文件及文件夹(目录)
