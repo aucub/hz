@@ -119,7 +119,7 @@ fun_features:
   progressbar:
     enable: true
     height_px: 3
-    color: "#29d"
+    color: "#D499B9"
     # See: https://github.com/rstacruz/nprogress
     options: { showSpinner: false, trickleSpeed: 100 }
 
@@ -151,7 +151,7 @@ color:
   # 顶部菜单字体色
   # Color of navigation bar text
   navbar_text_color: "#fff"
-  navbar_text_color_dark: "#d0d0d0"
+  navbar_text_color_dark: "#f4f4f4"
 
   # 副标题字体色
   # Color of navigation bar text
@@ -190,8 +190,8 @@ color:
 
   # 超链接悬浮时字体色
   # Color of link when hovering
-  link_hover_color: "#30A9DE"
-  link_hover_color_dark: "#47b8e0"
+  link_hover_color: "#CBA6C3"
+  link_hover_color_dark: "#C89EC4"
 
   # 超链接悬浮背景色
   # Color of link background when hovering
