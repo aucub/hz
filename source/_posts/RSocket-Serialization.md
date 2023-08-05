@@ -2,6 +2,7 @@
 title: RSocket为数据和元数据设置序列化
 keywords: RSocket,Serialization
 abbrlink: a9b88c97
+banner_img: /img/post_bannerl.png
 date: 2023-04-21 21:03:51
 updated: 2023-04-21 21:03:51
 tags:

@@ -2,6 +2,7 @@
 title: Gnome Wayland环境下设置OBS Studio缩放
 keywords: Gnome,Wayland,OBS
 abbrlink: dc187d12
+banner_img: /img/post_bannerh1.png
 date: 2023-08-05 03:28:28
 updated: 2023-08-05 03:28:28
 tags:

@@ -2,6 +2,7 @@
 title: 一次移动分区的尝试
 keywords: Btrfs,partition
 abbrlink: 8da451c
+banner_img: /img/post_bannerl1.png
 date: 2023-03-31 21:03:51
 updated: 2023-03-31 21:03:51
 tags:

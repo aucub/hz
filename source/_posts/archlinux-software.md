@@ -2,6 +2,7 @@
 title: ArchLinux 软件分享
 keywords: ArchLinux,Linux,Gnome,GUI,CLI,software,pacman,aur
 abbrlink: 7a6f3fec
+banner_img: /img/post_bannert.png
 date: 2023-01-25 09:36:36
 updated: 2023-08-05 06:05:05
 tags:
