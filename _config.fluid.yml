@@ -374,7 +374,7 @@ search:
 banner:
   # 视差滚动，图片与板块会随着屏幕滚动产生视差效果
   # Scrolling parallax
-  parallax: false
+  parallax: true
 
   # 图片最小的宽高比，以免图片两边被过度裁剪，适用于移动端竖屏时，如需关闭设为 0
   # Minimum ratio of width to height, applicable to the vertical screen of mobile device, if you need to close it, set it to 0
