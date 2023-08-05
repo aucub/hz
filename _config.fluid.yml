@@ -882,7 +882,7 @@ discuss:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/banner.png
+  banner_img: /img/banner1.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -920,7 +920,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/banner.png
+  banner_img: /img/banner2.png
   banner_img_height: 80
   banner_mask_alpha: 0.3
   tagcloud:
