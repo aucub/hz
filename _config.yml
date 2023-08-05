@@ -59,12 +59,68 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ""
-uglify:
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - "*.min.js"
+minify:
+  preview: false ## 本地预览时是否压缩
+  exclude: ["*.min.*"]
+  js:
+    enable: true
+    sourceMap:
+      enable: false ## 生成 sourceMap
+      ## 将 sourceMappingURL 插入压缩后的 js 文件，如果为 false 则需要在浏览器开发者工具中手动添加 sourceMap
+      sourceMappingURL: false ## //# sourceMappingURL=xxx.js.map
+    ## 详细配置: https://github.com/terser/terser#minify-options
+    options: {}
+  css:
+    enable: true
+    ## 详细配置: https://github.com/clean-css/clean-css#compatibility-modes
+    options: {}
+  html:
+    enable: true
+    ## 详细配置: https://github.com/kangax/html-minifier#options-quick-reference
+    options:
+      minifyJS: true # Compressed JavaScript
+      minifyCSS: true # CSS Compressed
+      removeComments: true # Remove the comments
+      collapseWhitespace: true # Delete any extra space
+      removeAttributeQuotes: true # Delete attribute quotes
+  image:
+    enable: true
+    svg:
+      enable: true
+      ## 详细配置: https://github.com/imagemin/imagemin-svgo#imageminsvgooptionsbuffer
+      options: {}
+    jpg:
+      enable: true
+      ## 详细配置: https://github.com/imagemin/imagemin-jpegtran#options
+      options: {}
+    png:
+      enable: true
+      ## 详细配置: https://github.com/imagemin/imagemin-pngquant#options
+      options: {}
+    gif:
+      enable: true
+      ## 详细配置: https://www.npmjs.com/package/imagemin-gifsicle#options
+      options: {}
+    webp:
+      enable: true
+      ## 详细配置: https://github.com/imagemin/imagemin-webp#options
+      options: {}
+  font:
+    enable: false
+    ## 详细配置: https://github.com/Lete114/fontmin-spider#api
+    options: {}
+prefetch:
+  enable: true # 是否启用预加载
+  entry: head_end # 具体内容说明: https://hexo.io/zh-cn/api/injector#entry-lt-string-gt
+  pageType: default # 具体内容说明: https://hexo.io/zh-cn/api/injector#to-lt-string-gt
+  delay: 1000 # 延迟1秒后预加载
+  threshold: 25 # 目标元素在浏览器可视区域25%时触发预加载
+  # 更多配置信息请看: https://github.com/Lete114/prefetch-page
+  # 自定义预加载资源，如果你开启了本地搜索功能，可以将下方的注释去掉，当使用搜索时不用等太长的请求时间
+  # customs: [/seatch.json]
+hash:
+  enable: true # 是否启用
+  # 更多配置信息请看: https://github.com/Lete114/cache-hash
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

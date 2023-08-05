@@ -21,14 +21,16 @@
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-hash": "^1.0.4",
     "hexo-math": "^4.0.0",
+    "hexo-minify": "^1.8.1",
+    "hexo-prefetch": "^1.0.0-beta.3",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.1.1",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-fluid": "^1.9.4",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-uglify": "^2.0.0",
     "highlight.js": "^11.8.0"
   }
 }
