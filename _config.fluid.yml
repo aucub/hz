@@ -186,7 +186,7 @@ color:
   # 文章超链接字体色
   # Color of post link
   post_link_color: "#4F86C6"
-  post_link_color_dark: "#2b90d9"
+  post_link_color_dark: "#30A9DE"
 
   # 超链接悬浮时字体色
   # Color of link when hovering
