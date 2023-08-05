@@ -131,6 +131,7 @@ deploy:
   type: git
   repo: git@hexo.github.com:aucub/aucub.github.io.git
   branch: master
+  ignore_hidden: false # 忽略隐藏文件及文件夹(目录)
 
 # sitemap
 sitemap:
