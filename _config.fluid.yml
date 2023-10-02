@@ -240,7 +240,7 @@ custom_css:
 # 网页访问统计
 # Analysis of website visitors
 web_analytics: # 网页访问统计
-  enable: true
+  enable: false
 
   # 遵循访客浏览器"请勿追踪"的设置，如果开启则不统计其访问
   # Follow the "Do Not Track" setting of the visitor's browser
@@ -256,7 +256,7 @@ web_analytics: # 网页访问统计
   # Google Analytics 4 MEASUREMENT_ID
   # See: https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article
   google:
-    measurement_id: G-2LX9REEBTP
+    measurement_id: 
 
   # 腾讯统计的 H5 App ID，开启高级功能才有cid
   # Tencent analytics, set APP ID

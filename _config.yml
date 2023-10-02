@@ -76,7 +76,7 @@ hexo_seo_autopush:
     date: created
     count: 10
   bing:
-    enable: true
+    enable: false
     date: updated
     count: 10
   google:
