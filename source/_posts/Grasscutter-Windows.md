@@ -4,7 +4,7 @@ keywords: Grasscutter,Windows,Genshin Impact
 abbrlink: 60991
 banner_img: /img/post_bannerh.png
 date: 2022-09-13 21:03:51
-updated: 2023-08-05 05:52:52
+updated: 2023-10-02 05:52:52
 tags:
   - Grasscutter
   - Windows
@@ -15,7 +15,7 @@ Grasscutter在Windows上的安装
 
 1.[下载并解压Grasscutter源代码（按需求选择版本）](https://github.com/Grasscutters/Grasscutter)         
 2.[下载对应版本的Grasscutter_Resources](https://gitlab.com/YuukiPS/GC-Resources)
-3.下载并[安装MongoDB Community Server](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.8-signed.msi)，如无修改安装目录的需求一路点确认即可。
+3.下载并[安装MongoDB Community Server](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.2-signed.msi)，如无修改安装目录的需求一路点确认即可。
 
 4.准备op非大陆版本的客户端，建议登陆一次，下载需要更新的资源，大陆版本也可。本文以非大陆版本为例，~~GenshinImpact.exe~~路径为~~C:\Program Files\Genshin Impact\GenshinImpact.exe~~。
 
@@ -45,7 +45,7 @@ pip install mitmdump
 .\gradlew jar
 ```
 
-编译完成将生成jar文件，文件名如grasscutter-1.6.3-dev.jar，将其重命名为grasscutter.jar
+编译完成将生成jar文件，文件名如grasscutter-1.7.2-dev.jar，将其重命名为grasscutter.jar
 
 可以使用编译好的jar文件，版本正确即可。[Grasscutter](https://github.com/Grasscutters/Grasscutter/releases)       
 2.在Grasscutter源代码文件夹新建resources文件夹，将Grasscutter_Resources\Resources下的文件夹全部移动至Grasscutter\resources目录下。

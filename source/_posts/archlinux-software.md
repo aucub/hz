@@ -4,7 +4,7 @@ keywords: ArchLinux,Linux,Gnome,GUI,CLI,software,pacman,aur
 abbrlink: 7a6f3fec
 banner_img: /img/post_bannert.png
 date: 2023-01-25 09:36:36
-updated: 2023-08-05 06:05:05
+updated: 2023-10-02 06:05:05
 tags:
   - Linux
 ---
@@ -28,6 +28,8 @@ tags:
 [kvantum](https://github.com/tsujan/Kvantum) - 用于 Qt5/6 的基于 SVG 的主题引擎（包括配置工具和额外的主题）。
 
 [orchis-kde-theme-git](https://github.com/vinceliuice/Orchis-kde) - Orchis kde 是 KDE Plasma 桌面的 materia Design 主题。
+
+[lightly-qt](https://github.com/Luwx/Lightly) - Lightly 是微风主题风格的一个分支，旨在视觉上现代和简约。
 
 ### 图标主题
 
@@ -87,7 +89,7 @@ tags:
 
 ## 图像
 
-[gthumb](https://gitlab.gnome.org/GNOME/gthumb) - 适用于 GNOME 环境的图像查看器和浏览器实用程序。 
+[nomacs](https://github.com/nomacs/nomacs) - nomacs 是一个免费的开源图像查看器，支持多个平台。您可以使用它查看所有常见的图像格式，包括 RAW 和 psd 图像。
 
 ## 终端
 
@@ -144,7 +146,7 @@ tags:
 
 [fd](https://github.com/sharkdp/fd) - 一个替代 find 的简单、快速和用户友好的方案。
 
-[exa](https://the.exa.website/) - ls替代方案。
+[eza](https://eza.rocks/) - ls替代方案。
 
 [fzf](https://github.com/junegunn/fzf) - 命令行模糊查找器。
 
