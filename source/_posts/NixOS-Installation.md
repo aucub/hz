@@ -4,7 +4,7 @@ keywords: NixOS,Linux
 abbrlink: b37fda7b
 banner_img: /img/post_bannerk.png
 date: 2023-07-30 23:04:04
-updated: 2023-07-30 23:04:04
+updated: 2023-10-02 23:04:04
 tags:
   - Linux
   - NixOS
@@ -144,6 +144,18 @@ time = {
 i18n = {
   defaultLocale = "zh_CN.UTF-8"; 
   supportedLocales = [ "zh_CN.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];
+  inputMethod = {
+    enabled = "fcitx5"; # fcitx5 输入法
+    fcitx5.addons = with pkgs; [fcitx5-with-addons fcitx5-chinese-addons];
+  };
+};
+
+environment.variables = {
+  GTK_IM_MODULE = "fcitx";
+  QT_IM_MODULE = "fcitx";
+  XMODIFIERS = "@im=fcitx";
+  SDL_IM_MODULE = "fcitx";
+  GLFW_IM_MODULE = "ibus";
 };
 ```
 
@@ -175,25 +187,35 @@ programs = {
 
 ```Nix
 boot = {
-  kernelPackages = pkgs.linuxPackages_lqx; # 使用Liquorix Kernel
+  kernelPackages = pkgs.linuxPackages_zen; # 使用Zen Kernel
   loader = {
-    grub = {
+    systemd-boot = {
       enable = true;
-      device = "/dev/nvme0n1";
-      configurationLimit = lib.mkDefault 5; # 限制启动列表数目
+      configurationLimit = 5;  # 限制启动列表数目
     };
     efi = {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi";
+      efiSysMountPoint = "/boot";
     };
   };
-  initrd.kernelModules = [ "btrfs" ];
+  kernelParams = [
+    "amd_pstate=passive"
+    "radeon.dpm=0"
+    "nvidia-drm.modeset=1"
+    "NVreg_PreserveVideoMemoryAllocations=1"
+  ];
+  consoleLogLevel = 3; # 启动日志显示等级
+  initrd.kernelModules = ["btrfs"];
   kernelModules = [
-    "fuse"
     "v4l2loopback"
+    "amdgpu"
+    "nvidia"
+    "nvidia_drm"
+    "nvidia_uvm"
+    "nvidia_modeset"
   ];
   extraModulePackages = [
-    pkgs.linuxKernel.packages.linux_lqx.v4l2loopback # 虚拟摄像头支持
+    pkgs.linuxKernel.packages.linux_zen.v4l2loopback # 虚拟摄像头支持
   ];
   extraModprobeConfig = ''
     options v4l2loopback exclusive_caps=1 video_nr=9 card_label="obs"

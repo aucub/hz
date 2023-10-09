@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.0
         with:
-          submodules: true # Checkout private submodules(themes or something else).
+          submodules: true # Checkout submodules(themes or something else).
 
       - name: Install Dependencies
         run: |
@@ -25,7 +25,7 @@ jobs:
           hexo clean
           hexo g
 
-      # 推送到仓库 from https://github.com/peaceiris/actions-gh-pages
+      # 推送到仓库
       - name: Deploy hexo to Github pages
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
