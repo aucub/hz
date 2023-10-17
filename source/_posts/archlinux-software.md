@@ -4,7 +4,7 @@ keywords: ArchLinux,Linux,Gnome,GUI,CLI,software,pacman,aur
 abbrlink: 7a6f3fec
 banner_img: /img/post_bannert.png
 date: 2023-01-25 09:36:36
-updated: 2023-10-02 06:05:05
+updated: 2023-10-17 06:05:05
 tags:
   - Linux
 ---
@@ -26,6 +26,8 @@ tags:
 [qt5ct](https://qt5ct.sourceforge.io/) - Qt5 配置实用程序。
 
 [kvantum](https://github.com/tsujan/Kvantum) - 用于 Qt5/6 的基于 SVG 的主题引擎（包括配置工具和额外的主题）。
+
+[colloid-kde-theme-git](https://github.com/vinceliuice/Colloid-kde) - Colloid kde 主题是 KDE Plasma 桌面的干净简洁的主题。
 
 [orchis-kde-theme-git](https://github.com/vinceliuice/Orchis-kde) - Orchis kde 是 KDE Plasma 桌面的 materia Design 主题。
 
@@ -108,6 +110,8 @@ tags:
 
 [pcmanfm-gtk3](https://lxde.org/) - 极其快速和轻量级的文件管理器（GTK+ 3 版本）。
 
+[yazi](https://github.com/sxyazi/yazi) - Yazi（中文“鸭子”）是一个用 Rust 编写的终端文件管理器，基于非阻塞异步 I/O。它旨在提供高效、用户友好且可定制的文件管理体验。
+
 [ranger](https://github.com/ranger/ranger) - 受 VIM 启发的控制台文件管理器。
 
 [nnn](https://github.com/jarun/nnn) - n³ 是一个功能齐全的终端文件管理器。
@@ -161,6 +165,8 @@ tags:
 ## 系统监控
 
 [procs](https://github.com/dalance/procs) - 用 Rust 编写的 ps 的现代替代品。
+
+[gdu](https://github.com/dundee/gdu) - 用 Go 编写的相当快的磁盘使用分析器。
 
 [dust](https://github.com/bootandy/dust) - rust 中 du 的更直观版本。
 
