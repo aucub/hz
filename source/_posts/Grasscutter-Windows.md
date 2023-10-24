@@ -5,6 +5,7 @@ abbrlink: 60991
 banner_img: /img/post_bannerh.png
 date: 2022-09-13 21:03:51
 updated: 2023-10-02 05:52:52
+archive: true
 tags:
   - Grasscutter
   - Windows

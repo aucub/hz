@@ -1,7 +1,9 @@
 ---
 title: {{ title }}
-keywords:
 date: {{ date }}
 updated: {{ date }}
+archive: false
+hide: false
+keywords:
 tags:
 ---
