@@ -38,7 +38,7 @@ ignored_content = []
 ignored_static = []
 
 # When set to "true", a feed is automatically generated.
-generate_feed = false
+generate_feed = true
 
 # The filename to use for the feed. Used as the template filename, too.
 # Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
@@ -67,7 +67,7 @@ author = ""
 #       {name = "authors"}, # Basic definition: no feed or pagination
 #     ]
 #
-taxonomies = [{ name = "tags" }]
+taxonomies = [{ name = "tags", feed = true }]
 
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
@@ -150,7 +150,6 @@ include_content = true
 # Accepted value "elasticlunr_javascript" or "elasticlunr_json"
 index_format = "elasticlunr_javascript"
 
-
 # Optional translation object for the default language
 # Example:
 #     default_language = "fr"
@@ -165,6 +164,7 @@ index_format = "elasticlunr_javascript"
 # title, description, generate_feed, feed_filename, taxonomies, build_search_index
 # as well as its own search configuration and translations (see above for details on those)
 # [languages]
+
 # For example
 # [languages.fr]
 # title = "Mon blog"
@@ -187,7 +187,7 @@ index_format = "elasticlunr_javascript"
 # Put all your custom variables here
 
 # control dark mode: auto | dark | toggle
-mode = "toggle"
+mode = "auto"
 
 # subtitle will show under the title in index page
 subtitle = ""
@@ -195,7 +195,7 @@ subtitle = ""
 # if set true, will use external CDN resource to load font and js file
 useCDN = true
 
-favicon = "/icon/favicon.png"
+favicon = "/icon/favicon.svg"
 
 # show in the footer
 copyright = ""
@@ -204,8 +204,8 @@ copyright = ""
 ga = ""
 
 # optional: config your i18n entry
-[extra.translations]
-languages = [{ name = "en", url = "/" }]
+# [extra.translations]
+# languages = [{ name = "en", url = "/" }]
 
 # config multi-language menu and other text
 [[extra.translations.en]]
@@ -218,12 +218,12 @@ read_time = "minute read"
 all_tags = "All tags"
 menus = [
     { name = "Home", url = "/", weight = 2 },
-    { name = "All posts", url = "/posts", weight = 2 },
-    { name = "Tags", url = "/tags", weight = 4 },
+    { name = "Posts", url = "/posts", weight = 2 },
+    { name = "Tags", url = "/tags", weight = 3 },
 ]
 
 # config social icon info in the footer
 [[extra.social]]
 icon = "github"
 name = "GitHub"
-url = "https://github.com/aucub"
+url = "https://github.com/aucub/blog"
