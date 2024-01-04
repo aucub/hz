@@ -86,8 +86,9 @@
                     page.extra.author.name }}</a>
                 {% endif %}
                 {{ extra.translations[lang][0].posted_on }} {{ page.date | date(format="%Y-%m-%d") }}
-
+                {% if page.updated != page.date %}
                 {{ extra.translations[lang][0].posted_updated }} {{ page.updated | date(format="%Y-%m-%d") }}
+                {% endif %}
                 {% if page.draft %}
                 <span class="draft-label">DRAFT</span>
                 {% endif %}
