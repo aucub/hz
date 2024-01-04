@@ -1,5 +1,5 @@
 # The base URL of the site; the only required configuration variable.
-base_url = "//blog-aucub.vercel.app/"
+base_url = "https://blog-aucub.vercel.app/"
 
 # The site title and description; used in feeds by default.
 title = ""
