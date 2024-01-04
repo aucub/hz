@@ -1,5 +1,5 @@
 # The base URL of the site; the only required configuration variable.
-base_url = "https://aucub.github.io"
+base_url = "//blog-aucub.vercel.app/"
 
 # The site title and description; used in feeds by default.
 title = ""
@@ -164,7 +164,7 @@ index_format = "elasticlunr_javascript"
 # You can define language specific config values and translations: 
 # title, description, generate_feed, feed_filename, taxonomies, build_search_index
 # as well as its own search configuration and translations (see above for details on those)
-[languages]
+# [languages]
 # For example
 # [languages.fr]
 # title = "Mon blog"
