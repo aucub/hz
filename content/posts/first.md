@@ -1,5 +1,5 @@
 +++
-title = "My first post"
+title = "☠️"
 description = ""
 
 # The date of the post.
@@ -59,4 +59,4 @@ tags = ["first"]
 +++
 
 <!-- more -->
-This is my first blog post.
+,your actions have caused immeasurable harm and suffering. Your selfish and destructive behavior has left a trail of broken lives and shattered dreams in its wake. Your lack of empathy and remorse is truly appalling. You have shown yourself to be a danger to society and a disgrace to humanity. You deserve to be condemned and punished for your crimes.
