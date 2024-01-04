@@ -193,7 +193,7 @@ mode = "auto"
 subtitle = ""
 
 # if set true, will use external CDN resource to load font and js file
-useCDN = true
+useCDN = false
 
 favicon = "/icon/favicon.svg"
 
@@ -213,8 +213,9 @@ show_more = "Read more ⟶"
 previous_page = "← Previous"
 next_page = "Next →"
 posted_on = "on "
+posted_updated = "updated "
 posted_by = "Published by"
-read_time = "minute read"
+read_time = "minute"
 all_tags = "All tags"
 menus = [
     { name = "Home", url = "/", weight = 2 },
