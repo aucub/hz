@@ -1,5 +1,5 @@
 # The base URL of the site; the only required configuration variable.
-base_url = "https://blog-aucub.vercel.app/"
+base_url = "https://hz-aucub.vercel.app/"
 
 # The site title and description; used in feeds by default.
 title = ""
@@ -218,7 +218,7 @@ posted_by = "Published by"
 read_time = "minute"
 all_tags = "All tags"
 menus = [
-    { name = "Home", url = "/", weight = 2 },
+    { name = "Home", url = "/", weight = 1 },
     { name = "Posts", url = "/posts", weight = 2 },
     { name = "Tags", url = "/tags", weight = 3 },
 ]
