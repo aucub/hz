@@ -39,9 +39,7 @@
             {% if page.description %}
             {{ page.description }}
             {% elif page.summary %}
-            <div class="post__summary">
-                {{ page.summary | safe }}
-            </div>
+            {{ page.summary | safe }}
             {% else %}
             {% set hide_read_more = true %}
             {% endif %}

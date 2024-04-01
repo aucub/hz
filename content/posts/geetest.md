@@ -1,7 +1,7 @@
 +++
 title = "Automating Geetest Verification"
 date = 2024-02-25
-updated = 2024-02-25
+updated = 2024-04-01
 [taxonomies]
 tags = ["tasteless"]
 +++
@@ -77,14 +77,6 @@ url = os.getenv("IMAGE_CLASSIFICATION_URL")
 response = requests.post(url, files=files)
 if response.ok:
     return response.json()
-```
-
- - CLIP Models: Another advanced method is to use Contrastive Language–Image Pretraining (CLIP) models to calculate embeddings and rank the images based on these.
-
-```python
-c = Client(os.getenv("CLIP_URL"))
-encoded_images = c.encode(images)
-return encoded_images
 ```
 
  - Vision Models: Alternatively, image recognition can be done via models such as GPT-4-Vision for identifying the objects.
