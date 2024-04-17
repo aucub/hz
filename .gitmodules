@@ -1,4 +1,3 @@
 [submodule "themes/archie-zola"]
-	path = themes/archie-zola
-	url = https://github.com/XXXMrG/archie-zola.git
-	branch = main
+path = themes/archie-zola
+url = https://github.com/XXXMrG/archie-zola.git
