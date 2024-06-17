@@ -1,56 +1,107 @@
 baseURL = 'https://tasteless-aucubs.vercel.app/'
-defaultContentLanguage = 'zh-cn'
-title = 'tasteless'
-# languageCode = "zh-CN"
-# hasCJKLanguage = true
-# title = ""
 theme = 'FixIt'
-[markup]
-[markup.highlight]
-codeFences = true
-lineNos = true
-lineNumbersInTable = true
-noClasses = false
-guessSyntax = true
-[markup.goldmark]
-[markup.goldmark.extensions]
-definitionList = true
-footnote = true
-linkify = true
-strikethrough = true
-table = true
-taskList = true
-typographer = true
-[markup.goldmark.renderer]
-unsafe = true
-[markup.tableOfContents]
-ordered = false
-startLevel = 2
-endLevel = 6
-[outputs]
-home = ["HTML", "RSS", "JSON", "archives"]
-page = ["HTML", "MarkDown"]
-section = ["HTML", "RSS"]
-taxonomy = ["HTML"]
-term = ["HTML", "RSS"]
+title = 'tasteless'
+defaultContentLanguage = 'zh-cn'
+languageCode = "zh-CN"
+hasCJKLanguage = true
+copyright = ''
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+[breadcrumb]
+enable = false
+sticky = false
+showHome = false
+[[menu.main]]
+identifier = "archives"
+name = "Archives"
+url = "/archives/"
+title = ""
+weight = 1
+[menu.main.params]
+class = ""
+draft = false
+icon = "fa-solid fa-archive"
+type = ""
+[[menu.main]]
+identifier = "tags"
+parent = ""
+pre = ""
+post = ""
+name = "Tags"
+url = "/tags/"
+title = ""
+weight = 2
+[menu.main.params]
+icon = "fa-solid fa-tags"
 [params]
 version = "0.3.X"
 description = "This is tasteless"
 keywords = ["tasteless"]
 WithSiteTitle = false
 DisableThemeInject = true
-# [params.gitInfo]
-# repo = "https://github.com/aucub/hzh"
-# branch = "main"
-# dir = "content"
-# [params.title]
-# typeit = false
-# [params.subtitle]
-# typeit = false
-# [params.footer]
-# enable = false
-# [params.backToTop]
-# enable = false
-# scrollpercent = false
-# [params.cookieconsent]
-# enable = false
+[params.gitInfo]
+repo = "https://github.com/aucub/tasteless"
+branch = "main"
+dir = "content"
+[params.author]
+name = "secluded"
+avatar = "🎲"
+[params.home]
+[params.home.profile]
+enable = false
+[params.title]
+typeit = false
+[params.subtitle]
+typeit = false
+[params.footer]
+enable = false
+copyright = false
+author = false
+license = ''
+[params.footer.powered]
+enable = false
+hugoLogo = false
+themeLogo = false
+[footer.siteTime]
+enable = false
+animate = false
+[params.backToTop]
+enable = false
+scrollpercent = false
+[params.cookieconsent]
+enable = false
+[params.page]
+authorAvatar = true
+twemoji = true
+license = ''
+# 是否显示原始 Markdown 文档内容的链接
+linkToMarkdown = false
+# 是否显示查看文章源码的链接
+linkToSource = false
+# 是否显示编辑文章的链接
+linkToEdit = false
+# 是否显示报告文章问题的链接
+linkToReport = false
+autoBookmark = false
+wordCount = true
+readingTime = true
+# 代码配置
+[params.page.code]
+# 是否显示代码块的编辑按钮
+edit = false
+# 默认展开显示的代码行数
+maxShownLines = 9999
+# 相关内容配置
+[params.page.related]
+enable = false
+# 赞赏设置
+[params.page.reward]
+enable = false
+# 文章页面的分享信息设置
+[params.page.share]
+enable = false
+[params.page.comment]
+enable = false
+[params.analytics]
+enable = false
