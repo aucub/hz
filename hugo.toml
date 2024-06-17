@@ -1,0 +1,59 @@
+baseURL = 'https://tasteless-aucubs.vercel.app/'
+defaultContentLanguage = 'zh-cn'
+title = 'tasteless'
+# languageCode = "zh-CN"
+# hasCJKLanguage = true
+# title = ""
+theme = 'FixIt'
+[module]
+[[module.imports]]
+path = "github.com/hugo-fixit/FixIt"
+[markup]
+[markup.highlight]
+codeFences = true
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+guessSyntax = true
+[markup.goldmark]
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
+typographer = true
+[markup.goldmark.renderer]
+unsafe = true
+[markup.tableOfContents]
+ordered = false
+startLevel = 2
+endLevel = 6
+[outputs]
+home = ["HTML", "RSS", "JSON", "archives"]
+page = ["HTML", "MarkDown"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML"]
+term = ["HTML", "RSS"]
+[params]
+version = "0.3.X"
+description = "This is tasteless"
+keywords = ["tasteless"]
+WithSiteTitle = false
+DisableThemeInject = true
+# [params.gitInfo]
+# repo = "https://github.com/aucub/hzh"
+# branch = "main"
+# dir = "content"
+# [params.title]
+# typeit = false
+# [params.subtitle]
+# typeit = false
+# [params.footer]
+# enable = false
+# [params.backToTop]
+# enable = false
+# scrollpercent = false
+# [params.cookieconsent]
+# enable = false

@@ -1,0 +1,25 @@
+name: Update theme
+
+on:
+  schedule:
+    - cron: "0 0 * * 3"
+  workflow_dispatch:
+
+jobs:
+  Update-FixIt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Update theme
+        run: git submodule update --remote --merge themes/FixIt
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: ':arrow_up: Chore(theme): update FixIt version'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
