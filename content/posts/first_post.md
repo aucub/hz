@@ -1,7 +1,6 @@
 ---
 title: My First Post
 date: 2023-02-20T20:14:22+08:00
-draft: false
 ---
 
 Falling. Grenades. No start. No end. Deflect. Dodge. Run. Run. Run.

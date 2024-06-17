@@ -6,24 +6,46 @@ languageCode = "zh-CN"
 hasCJKLanguage = true
 copyright = ''
 enableEmoji = true
-enableGitInfo = true
+enableGitInfo = false
 enableRobotsTXT = true
+[markup]
+[markup.highlight]
+codeFences = true
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+style = 'monokai'
 [breadcrumb]
 enable = false
 sticky = false
 showHome = false
-[[menu.main]]
+[menus]
+[[menus.main]]
 identifier = "archives"
+parent = ""
+pre = ""
+post = ""
 name = "Archives"
 url = "/archives/"
 title = ""
 weight = 1
-[menu.main.params]
+[menus.main.params]
 class = ""
 draft = false
 icon = "fa-solid fa-archive"
 type = ""
-[[menu.main]]
+[[menus.main]]
+identifier = "categories"
+parent = ""
+pre = ""
+post = ""
+name = "Categories"
+url = "/categories/"
+title = ""
+weight = 2
+[menus.main.params]
+icon = "fa-solid fa-folder-tree"
+[[menus.main]]
 identifier = "tags"
 parent = ""
 pre = ""
@@ -31,8 +53,8 @@ post = ""
 name = "Tags"
 url = "/tags/"
 title = ""
-weight = 2
-[menu.main.params]
+weight = 3
+[menus.main.params]
 icon = "fa-solid fa-tags"
 [params]
 version = "0.3.X"
@@ -46,7 +68,7 @@ branch = "main"
 dir = "content"
 [params.author]
 name = "secluded"
-avatar = "🎲"
+avatar = ""
 [params.home]
 [params.home.profile]
 enable = false
@@ -72,7 +94,7 @@ scrollpercent = false
 [params.cookieconsent]
 enable = false
 [params.page]
-authorAvatar = true
+authorAvatar = false
 twemoji = true
 license = ''
 # 是否显示原始 Markdown 文档内容的链接
@@ -88,6 +110,7 @@ wordCount = true
 readingTime = true
 # 代码配置
 [params.page.code]
+copy = true
 # 是否显示代码块的编辑按钮
 edit = false
 # 默认展开显示的代码行数
