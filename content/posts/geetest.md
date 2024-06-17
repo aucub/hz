@@ -4,9 +4,12 @@ date = 2024-02-25T17:55:28+08:00
 lastmod = 2024-04-01T17:55:28+08:00
 tags = ["tasteless"]
 +++
+
 Automating Geetest Verification Using SeleniumBase
 <!-- more -->
+
 Overcoming the challenge of CAPTCHAs is a recurring topic in automation and web scraping. One well-known type is the Geetest CAPTCHA, which asks users to identify and click on images matching a specific hint. This article describes an approach to automate this process using SeleniumBase and other software tools.
+
 ## Capturing the Verification Images
 The initial task is to capture the images presented by the Geetest CAPTCHA. With SeleniumBase, there are two primary methods:
 
