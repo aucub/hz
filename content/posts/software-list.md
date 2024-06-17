@@ -24,7 +24,6 @@ tags = ["软件"]
 ### 字体
 
 - [Sarasa-Gothic](https://github.com/be5invis/Sarasa-Gothic) - 基于 Iosevka 和 Source Han Sans 的 CJK 编程字体。
-- [twemoji](https://github.com/jdecked/twemoji) - Twemoji 的 Truetype 版本；Twitter 彩色表情符号，适合所有人。
 
 ### 下载管理器
 

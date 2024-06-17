@@ -1,0 +1,65 @@
+name: Translate
+
+on:
+  push:
+    paths:
+      - "content/posts/*.md"
+    branches:
+      - main
+  # schedule:
+  #   - cron: "0 0 * * 3"
+  workflow_dispatch:
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: printf "\nOVERWRITE_POLICY=\"skip\"\n" >> .env
+      - if: github.event_name == 'push'
+        run: printf "\nOVERWRITE_POLICY=\"overwrite\"\n" >> .env
+      - run: printf "API_ENDPOINT=\"${API_ENDPOINT}\"\nOPENAI_API_KEY=\"${OPENAI_API_KEY}\"\n" >> .env
+        env:
+          API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - run: npm install --global chatgpt-md-translator
+      - name: Find modified markdown files
+        if: github.event_name == 'push'
+        id: find_modified_md
+        run: |
+          LATEST_COMMIT=$(git rev-parse HEAD)
+          PREVIOUS_COMMIT=$(git rev-parse HEAD^1)
+          MODIFIED_FILES=$(git diff --name-only $PREVIOUS_COMMIT $LATEST_COMMIT -- 'content/posts/*.md' | grep -v '\.en\.md$')
+          echo "modified_files=$MODIFIED_FILES" >> $GITHUB_ENV
+      - name: Check for untranslated files and translate
+        if: github.event_name == 'push'
+        run: |
+          for file in $modified_files; do
+            base_name="${file%.md}"
+            echo "Translating $file"
+            chatgpt-md-translator "$file"
+          done
+      - name: Translate
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          ALL_FILES=$(find content/posts -type f -name "*.md" | grep -v '\.en\.md$')
+          for file in $ALL_FILES; do
+            base_name="${file%.md}"
+            echo "Translating $file"
+            chatgpt-md-translator "$file"
+            fi
+          done
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          add-paths: content/posts/*.en.md
+          commit-message: translate
+          branch: translate
+          delete-branch: true
+          title: "translate"
+          body: translate
+          labels: |
+            translate
+            automated pr

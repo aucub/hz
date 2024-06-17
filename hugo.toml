@@ -8,7 +8,7 @@ languageName = "简体中文"
 hasCJKLanguage = true
 copyright = ''
 enableEmoji = true
-enableGitInfo = false
+enableGitInfo = true
 enableRobotsTXT = true
 [languages]
 [languages.zh-cn]
@@ -71,6 +71,10 @@ description = "This is tasteless"
 keywords = ["tasteless"]
 WithSiteTitle = false
 DisableThemeInject = true
+[params.search]
+enable = true
+[params.pangu]
+enable = true
 [params.gitInfo]
 repo = "https://github.com/aucub/tasteless"
 branch = "main"
