@@ -35,17 +35,6 @@ draft = false
 icon = "fa-solid fa-archive"
 type = ""
 [[menus.main]]
-identifier = "categories"
-parent = ""
-pre = ""
-post = ""
-name = "Categories"
-url = "/categories/"
-title = ""
-weight = 2
-[menus.main.params]
-icon = "fa-solid fa-folder-tree"
-[[menus.main]]
 identifier = "tags"
 parent = ""
 pre = ""
