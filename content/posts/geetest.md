@@ -1,8 +1,7 @@
 +++
 title = "Automating Geetest Verification"
-date = 2024-02-25
-updated = 2024-04-01
-[taxonomies]
+date = 2024-02-25T17:55:28+08:00
+lastmod = 2024-04-01T17:55:28+08:00
 tags = ["tasteless"]
 +++
 Automating Geetest Verification Using SeleniumBase

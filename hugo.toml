@@ -19,6 +19,12 @@ style = 'monokai'
 enable = false
 sticky = false
 showHome = false
+[outputs]
+home = ["HTML", "JSON", "archives", "offline"]
+page = ["HTML", "MarkDown"]
+section = ["HTML"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 [menus]
 [[menus.main]]
 identifier = "archives"

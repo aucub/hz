@@ -1,8 +1,7 @@
 +++
 title = "My ArchLinux software list"
-date = 2023-01-25
-updated = 2023-10-17
-[taxonomies]
+date = 2023-01-25T17:55:28+08:00
+lastmod = 2023-10-17T17:55:28+08:00
 tags = ["software"]
 +++
 

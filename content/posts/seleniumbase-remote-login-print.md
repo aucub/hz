@@ -1,9 +1,7 @@
 +++
 title = "SeleniumBase 二维码远程登录：获取文本并打印到终端"
-date = 2024-04-19
-updated = 2024-04-19
+date = 2024-04-19T17:55:28+08:00
 draft = true
-[taxonomies]
 tags = ["tasteless"]
 +++
 当遇到需要扫描二维码登录的情况，可以使用 SeleniumBase 和 qrcode 库实现自动获取二维码并打印到终端，方便用户扫描登录

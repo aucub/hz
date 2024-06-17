@@ -1,8 +1,6 @@
 +++
 title = "SeleniumBase 监听网络请求"
-date = 2024-04-28
-updated = 2024-04-28
-[taxonomies]
+date = 2024-04-28T17:55:28+08:00
 tags = ["tasteless"]
 +++
 当我们需要获取浏览器网络请求信息时，SeleniumBase 提供了便捷的方式来实现网络请求监听。本文将介绍如何使用 SeleniumBase 开启 CDP 事件日志、监听网络请求、获取响应内容以及关闭监听。
