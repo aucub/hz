@@ -13,13 +13,11 @@ enableRobotsTXT = true
 [languages]
 [languages.zh-cn]
 weight = 1
-# contentDir = "content/zh-cn"
 languageCode = "zh-CN"
 languageName = "简体中文"
 hasCJKLanguage = true
 [languages.en]
 weight = 2
-# contentDir = "content/en"
 languageName = 'English'
 hasCJKLanguage = false
 [markup]
