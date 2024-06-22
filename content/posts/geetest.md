@@ -1,26 +1,26 @@
 +++
-title = "自动完成极验验证"
+title = "Automating Geetest Verification"
 date = 2024-02-25T17:55:28+08:00
 lastmod = 2024-04-01T17:55:28+08:00
 tags = ["tasteless"]
 +++
 
-使用 SeleniumBase 自动完成极验验证
+Automating Geetest Verification Using SeleniumBase
 <!-- more -->
 
-克服 CAPTCHA 的挑战是自动化和网络爬虫中反复出现的话题。极验 CAPTCHA 是一种众所周知的类型，它要求用户识别并点击与特定提示匹配的图像。本文介绍了一种使用 SeleniumBase 和其他软件工具来自动执行此过程的方法。
+Overcoming the challenge of CAPTCHAs is a recurring topic in automation and web scraping. One well-known type is the Geetest CAPTCHA, which asks users to identify and click on images matching a specific hint. This article describes an approach to automate this process using SeleniumBase and other software tools.
 
-## 捕获验证图像
-第一步是捕获极验 CAPTCHA 展示的图像。使用 SeleniumBase，主要有两种方法：
+## Capturing the Verification Images
+The initial task is to capture the images presented by the Geetest CAPTCHA. With SeleniumBase, there are two primary methods:
 
- - 元素截图：这使我们能够对页面上的特定元素进行截图。
+ - Screenshot Element: This allows us to take a screenshot of a specific element on the page.
 
 ```python
 self.save_element_as_image_file("[class*='geetest_tip_img']", "tip_image")
 self.save_element_as_image_file("[class*='geetest_item_wrap']", "img_image")
 ```
 
- - URL 提取：有时，可以直接提取验证图像的 URL。对于极验，图像大小标准化为 344x384 像素。40x150 像素的底部区域提供了有关选择哪些图像的提示。
+ - URL Extraction: Sometimes, it's possible to extract the URL of the verification images directly.For Geetest, the image size is standardized at 344x384 pixels. The bottom area of 40x150 pixels provides hints about which images to select.
 
 
 ```python
@@ -39,10 +39,10 @@ bottom_image = image.crop((0, 344, 150, height))
 bottom_image.save("tip_image.png")
 ```
 
-## 提取图像特征
-获得图像后，我们需要分析它们以将提示与正确的图片匹配。我们可以从要检查的图像和提示图像中提取特征对象。潜在的方法包括：
+## Extracting Image Features
+Once we have the images, we need to analyze them to match the hints with the right pictures. We can extract feature objects from both the to-be-checked images and the hint image. Potential methods include:
 
- - 直接使用 OCR：像 ddddocr 这样的工具可以用于直接从图像中识别对象。
+ - Direct Use of OCR: Tools like ddddocr can be employed for direct object recognition from images.
 
 ```python
 det = ddddocr.DdddOcr(det=True)
@@ -60,16 +60,14 @@ for box in poses:
 return poses
 ```
 
- - 训练自定义模型：对于更定制的方法，可以使用 YOLO 或其他机器学习框架训练模型。
+ - Training a Custom Model: For a more tailored approach, one can train a model using YOLO or other machine learning frameworks.
 
-然后可以根据这些对象的“x”位置对它们进行排序。
+These objects can then be sorted based on their "x" position.
 
-## 排序和匹配
-识别特征对象及其位置后，下一步是将验证代码对象与提示对象匹配。这里我们可以采用几种技术：
+## Sorting and Matching
+After identifying the characteristic object and its location, the next step is to match the verification code object with the prompted object. Here we can employ several techniques:
 
- - 图像分类模型：一种方法是，可以使用 microsoft/resnet-50 等模型来获取分类结果，然后计算图像与提示之间的余弦距离。
-
-
+ - Image Classification Models: One is that you can use a model such as microsoft/resnet-50 to obtain the classification results and then calculate the cosine distance between the image and the cue.
 
 ```python
 with Image.open(image_path) as img:
@@ -83,7 +81,7 @@ if response.ok:
     return response.json()
 ```
 
- - 视觉模型：或者，可以通过 GPT-4-Vision 等模型进行图像识别来识别物体。
+ - Vision Models: Alternatively, image recognition can be done via models such as GPT-4-Vision for identifying the objects.
 
 ```python
 with open(image1_path, "rb") as image_file:
@@ -125,8 +123,8 @@ else:
     return -0.9
 ```
 
-## 执行点击
-根据余弦距离或模型计算对图像进行排序后，我们继续模拟点击。需要考虑的一个重要方面是坐标转换。我们必须准确地将图像坐标转换为网页元素的坐标，以确保与 CAPTCHA 精确交互。
+## Performing the Clicks
+After sorting the images based on the cosine distances or model computations, we proceed with simulating clicks. An important aspect to consider is the coordinate transformation.we must accurately translate the image coordinates to the web element's coordinates to ensure precise interaction with the CAPTCHA.
 
 ```python
 for click in click_lists:
@@ -141,5 +139,4 @@ self.click(
 )
 ```
 
-通过仔细选择和使用图像捕获、特征提取、排序、匹配和交互技术的正确组合，可以有效地自动化通过极验验证的过程。 
-
+By carefully selecting and using the right combination of image capture, feature extraction, sorting, matching, and interaction techniques, one can effectively automate the process of passing the Geetest verification. 
