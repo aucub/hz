@@ -2,7 +2,7 @@
     "framework": "hugo",
     "installCommand": "git submodule update --init --recursive",
     "env": {
-        "HUGO_VERSION": "0.127.0"
+        "HUGO_VERSION": "0.128.0"
     },
     "outputDirectory": "public"
 }
